@@ -17,33 +17,33 @@
 
 <body>
 <script>
-  logInWithFacebook = function() {
-    FB.login(function(response) {
-      if (response.authResponse) {
-
-      window.location = "http://studyhere-audiodict.rhcloud.com/fb-login";
-      } else {
-        alert('User cancelled login or did not fully authorize.');
-      }
-    });
-    return false;
-  };
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId: '709854915792963',
-      cookie: true, // This is important, it's not enabled by default
-      version: 'v2.2'
-    });
-  };
-
-  (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
+//   logInWithFacebook = function() {
+//     FB.login(function(response) {
+//       if (response.authResponse) {
+//
+//       window.location = "http://ritesh.app/fb-login";
+//       } else {
+//         alert('User cancelled login or did not fully authorize.');
+//       }
+//     });
+//     return false;
+//   };
+//   window.fbAsyncInit = function() {
+//     FB.init({
+//       appId: '709854915792963',
+//       cookie: true, // This is important, it's not enabled by default
+//       version: 'v2.2'
+//     });
+//   };
+//
+//   (function(d, s, id){
+//     var js, fjs = d.getElementsByTagName(s)[0];
+//     if (d.getElementById(id)) {return;}
+//     js = d.createElement(s); js.id = id;
+//     js.src = "//connect.facebook.net/en_US/sdk.js";
+//     fjs.parentNode.insertBefore(js, fjs);
+//   }(document, 'script', 'facebook-jssdk'));
+ </script>
 
 
   <nav class="light-blue lighten-1" role="navigation">
@@ -85,7 +85,7 @@
                 <a href="#" id="signup-box-link">Sign Up</a>
               </div>
               <div class="social-login">
-                <a href="javascript:void(0)" onClick="logInWithFacebook()">
+                <a href="/login/fb" onClick="logInWithFacebook()">
         <i class="fa fa-facebook fa-lg"></i>
         Login in with facebook
       </a>

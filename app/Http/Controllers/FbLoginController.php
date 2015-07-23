@@ -11,26 +11,20 @@ class FbLoginController extends Controller {
 
 	public function handle()
 	{
-		$fb = new Facebook\Facebook([
-  'app_id' => '{app-id}',
-  'app_secret' => '{app-secret}',
-  'default_graph_version' => 'v2.2',
-  ]);
+		$fb = App::make('SammyK\LaravelFacebookSdk\LaravelFacebookSdk');
+		try {
+	        $token = $fb->getJavaScriptHelper()->getAccessToken();
+					return $token;
+	    } catch (Facebook\Exceptions\FacebookSDKException $e) {
+	        // Failed to obtain access token
+	        dd($e->getMessage());
+	    }
 
-$helper = $fb->getJavaScriptHelper();
-
-try {
-  $accessToken = $helper->getAccessToken();
-	return $accessToken;
-
-} catch(Facebook\Exceptions\FacebookResponseException $e) {
-  // When Graph returns an error
-return 'Graph returned an error: ' . $e->getMessage();
-  exit;
-} catch(Facebook\Exceptions\FacebookSDKException $e) {
-  // When validation fails or other local issues
-  return 'Facebook SDK returned an error: ' . $e->getMessage();
-  exit;
-}
+	    // $token will be null if no cookie was set or no OAuth data
+	    // was found in the cookie's signed request data
+	    if (! $token) {
+	        // User hasn't logged in using the JS SDK yet
+	    }
+			return $token;
 	}
 }
