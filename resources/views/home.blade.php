@@ -21,7 +21,7 @@
     FB.login(function(response) {
       if (response.authResponse) {
 
-      window.location = "http://www.ritesh.app/fb-login";
+      window.location = "http://studyhere-audiodict.rhcloud.com//fb-login";
       } else {
         alert('User cancelled login or did not fully authorize.');
       }
