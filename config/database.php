@@ -59,9 +59,9 @@ return [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', env('OPENSHIFT_MYSQL_DB_HOST', 'localhost')),
 			'port'      => env('DB_PORT', env('OPENSHIFT_MYSQL_DB_PORT', 3306)),
-			'database'  => env('DB_DATABASE', env('OPENSHIFT_APP_NAME', 'forge')),
-			'username'  => env('DB_USERNAME', env('OPENSHIFT_MYSQL_DB_USERNAME', 'forge')),
-			'password'  => env('DB_PASSWORD', env('OPENSHIFT_MYSQL_DB_PASSWORD', '')),
+			'database'  => env('DB_DATABASE', env('OPENSHIFT_APP_NAME', 'studyhere')),
+			'username'  => env('DB_USERNAME', env('OPENSHIFT_MYSQL_DB_USERNAME', 'root')),
+			'password'  => env('DB_PASSWORD', env('OPENSHIFT_MYSQL_DB_PASSWORD', 'secret')),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
@@ -72,9 +72,9 @@ return [
 			'driver'   => 'pgsql',
 			'host'     => env('DB_HOST', env('OPENSHIFT_POSTGRESQL_DB_HOST', 'localhost')),
 			'port'     => env('DB_PORT', env('OPENSHIFT_POSTGRESQL_DB_PORT', 5432)),
-			'database' => env('DB_DATABASE', env('OPENSHIFT_APP_NAME', 'forge')),
-			'username' => env('DB_USERNAME', env('OPENSHIFT_POSTGRESQL_DB_USERNAME', 'forge')),
-			'password' => env('DB_PASSWORD', env('OPENSHIFT_POSTGRESQL_DB_PASSWORD', '')),
+			'database' => env('DB_DATABASE', env('OPENSHIFT_APP_NAME', 'studyhere')),
+			'username' => env('DB_USERNAME', env('OPENSHIFT_POSTGRESQL_DB_USERNAME', 'root')),
+			'password' => env('DB_PASSWORD', env('OPENSHIFT_POSTGRESQL_DB_PASSWORD', 'secret')),
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
@@ -104,7 +104,7 @@ return [
 	| provides a richer set of commands than a typical key-value systems
 	| such as APC or Memcached. Laravel makes it easy to dig right in.
 	|
-	| OpenShift Notes: 
+	| OpenShift Notes:
 	|   Redis:       https://hub.openshift.com/addons/34-redis
 	|   Redis Cloud: https://hub.openshift.com/addons/17-rediscloud
 	|
