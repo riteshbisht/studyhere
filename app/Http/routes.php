@@ -1,7 +1,8 @@
 <?php
 
-use App\Profile;
+
 use App\User;
+use App\Profile;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -18,9 +19,11 @@ Route::get('/dashboard','DashboardController@start');
 //Route::get('/fb-login','FbLoginController@handle');
 Route::get('login/fb', function() {
     $facebook = new Facebook(Config::get('facebook'));
-
-    $permissions = ['email'];
-    return Redirect::to($facebook->getLoginUrl('http//ritesh.app.com/login/fb/callback',$permissions));
+    $params = array(
+        'redirect_uri' => url('/login/fb/callback'),
+        'scope' => 'email,public_profile',
+    );
+    return Redirect::to($facebook->getLoginUrl($params));
 });
 
  Route::controllers([
@@ -35,24 +38,23 @@ Route::get('login/fb', function() {
     $facebook = new Facebook(Config::get('facebook'));
     $uid = $facebook->getUser();
 
+
     if ($uid == 0) return Redirect::to('/')->with('message', 'There was an error');
 
-    $me = $facebook->api('/me');
-
+    $me = $facebook->api('/me?fields=id,name,email');
     $profile = Profile::whereUid($uid)->first();
     if (empty($profile)) {
 
         $user = new User;
-        return $me;
+
         $user->name = $me['name'];
         $user->email = $me['email'];
-        $user->photo = 'https://graph.facebook.com/'.$me['username'].'/picture?type=large';
-
+        $user->photo = 'https://graph.facebook.com/'.$me['id'].'/picture?type=large';
         $user->save();
 
-        $profile = new Profile();
+        $profile = new App\Profile();
         $profile->uid = $uid;
-        $profile->username = $me['username'];
+        $profile->username = $me['name'];
         $profile = $user->profiles()->save($profile);
     }
 
@@ -61,7 +63,7 @@ Route::get('login/fb', function() {
 
     $user = $profile->user;
 
-    Auth::login($user);
+  Auth::login($user);
 
-    return Redirect::to('/')->with('message', 'Logged in with Facebook');
+   return \View::make('dashboard')->with('name',$user->name);
 });

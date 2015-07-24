@@ -1,5 +1,5 @@
 <?php namespace App;
-
+use App\Profile;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -33,7 +33,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 	public function profiles()
 	{
-			return $this->hasMany('Profile');
+			return $this->hasMany('App\Profile');
 	}
 
 }

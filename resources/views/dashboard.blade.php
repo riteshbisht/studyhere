@@ -2,6 +2,6 @@
 
 @section('content')
 
-<h1>helllo {!!$name!!}</h1>
-me
+<h1> {!!$name!!}</h1>
+
 @endsection
