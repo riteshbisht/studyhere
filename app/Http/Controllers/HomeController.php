@@ -1,17 +1,21 @@
-<?php namespace App\Http\Controllers;
+<?php
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
-class HomeController extends Controller {
+class HomeController extends Controller
+{
+    public function start()
+    {
+        if (Auth::check()) {
+				//	dd("hello");
+          return  Redirect::to('/dashboard');
+        }
+else {
 
-	public function start()
-	{
-
-	
-		return view('home');
-	}
-
+        return view('home');
+			}
+    }
 }

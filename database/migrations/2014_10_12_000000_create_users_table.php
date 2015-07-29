@@ -17,15 +17,17 @@ class CreateUsersTable extends Migration {
       Schema::create('users', function(Blueprint $table)
       {
           $table->increments('id');
-
           $table->string('name', 32);
           $table->string('username', 32);
           $table->string('email')->unique();
           $table->string('photo');
+          $table->boolean('completeprofilepage')->defaut(0);
           $table->string('password', 64);
-
+          $table->boolean('confirmed')->default(0);
+           $table->string('confirmation_code')->nullable();
+          $table->string('uid');
                       // required for Laravel 4.1.26
-                      $table->string('remember_token', 100)->nullable();
+          $table->string('remember_token', 100)->nullable();
           $table->timestamps();
       });
   }

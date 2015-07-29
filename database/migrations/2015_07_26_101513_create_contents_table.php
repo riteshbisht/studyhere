@@ -15,9 +15,12 @@ class CreateContentsTable extends Migration {
 		Schema::create('contents', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('subtopic_code')->references('subtopic_code')->on('sub_topics');
-			$table->string('content');
+			$table->string('subtopic_code');
+			$table->string('content')->default('not available');
 			$table->string('source');
+			$table->string('urlofcloud');
+			$table->foreign('subtopic_code')->references('subtopic_code')->on('sub_topics');
+			$table->timestamps();
 		});
 	}
 

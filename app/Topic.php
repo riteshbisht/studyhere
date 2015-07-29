@@ -5,6 +5,11 @@ use Illuminate\Database\Eloquent\Model;
 class Topic extends Model {
 
 	//
-protected $fillable=['topic_code','name','subject_code'];
+	protected $primaryKey = 'topic_code';
+	
+	public function subtopics()
+	{
+		return $this->hasMany('App\SubTopic','topic_code','topic_code');
+	}
 
 }

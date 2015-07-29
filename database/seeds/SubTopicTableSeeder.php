@@ -908,14 +908,14 @@ public function run()
     DB::table('sub_topics')->insert([
         'name'=>'thread cutting (with taps and dies)',
         'topic_code'=>'ETME-105-4',
-        'subtopic_code'=>'ETME-105-3-3',
+        'subtopic_code'=>'ETME-105-4-3',
     ]);
 
 
     DB::table('sub_topics')->insert([
         'name'=>'Marking and marking tools',
         'topic_code'=>'ETME-105-4',
-        'subtopic_code'=>'ETME-105-3-4',
+        'subtopic_code'=>'ETME-105-4-4',
     ]);
 
 
@@ -1404,19 +1404,19 @@ public function run()
     DB::table('sub_topics')->insert([
         'name'=>'Windows ( 2000 and NT)',
         'topic_code'=>'ETCS-111-2',
-        'subtopic_code'=>'ETCS-111-2-1',
+        'subtopic_code'=>'ETCS-111-2-2',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Overview of architecture of Windows, tools and system utilities including registry , partitioning of hard disk',
         'topic_code'=>'ETCS-111-2',
-        'subtopic_code'=>'ETCS-111-2-1',
+        'subtopic_code'=>'ETCS-111-2-3',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Overview of Linux architecture , File system , file and permissions , concept of user and group , installation of rpm and deb based packages',
         'topic_code'=>'ETCS-111-2',
-        'subtopic_code'=>'ETCS-111-2-1',
+        'subtopic_code'=>'ETCS-111-2-4',
     ]);
 
     DB::table('sub_topics')->insert([
@@ -1434,7 +1434,7 @@ public function run()
     DB::table('sub_topics')->insert([
         'name'=>'Network topologies and protocols ',
         'topic_code'=>'ETCS-111-4',
-        'subtopic_code'=>'ETCS-111-2-2',
+        'subtopic_code'=>'ETCS-111-4-2',
     ]);
 
     DB::table('sub_topics')->insert([
@@ -1544,75 +1544,75 @@ public function run()
     DB::table('sub_topics')->insert([
         'name'=>'Application of phase rule to One component system- The water system',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-1',
+        'subtopic_code'=>'ETCH-113-2-3',
     ]);
 
 
     DB::table('sub_topics')->insert([
         'name'=>'Application of phase rule to Two component system- The Lead-Silver system (Pattinson’s process)',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-3',
+        'subtopic_code'=>'ETCH-113-2-4',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Catalyst and its characteristics',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-4',
+        'subtopic_code'=>'ETCH-113-2-5',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Types of catalysts',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-5',
+        'subtopic_code'=>'ETCH-113-2-6',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Concept of promoters, inhibitors and poisons',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-6',
+        'subtopic_code'=>'ETCH-113-2-7',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Theories of catalysis: Intermediate compound formation theory, adsorption or contact theory',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-7',
+        'subtopic_code'=>'ETCH-113-2-8',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Application of catalysts for industrially important processes',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-8',
+        'subtopic_code'=>'ETCH-113-2-9',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Enzyme catalysis: Characteristics, Kinetics & Mechanism of enzyme catalysed reaction ( Michaelis-Menten equation)',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-9',
+        'subtopic_code'=>'ETCH-113-2-10',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Acid-Base catalysis: Types, Kinetics & Mechanism',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-10',
+        'subtopic_code'=>'ETCH-113-2-11',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Catalysis by metals salts (Wilkinson’s Catalyst)',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-11',
+        'subtopic_code'=>'ETCH-113-2-12',
     ]);
 
 
     DB::table('sub_topics')->insert([
         'name'=>'Auto-catalysis',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-12',
+        'subtopic_code'=>'ETCH-113-2-13',
     ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Heterogeneous catalysis (Langmuir-Hinshelwood mechanism)',
         'topic_code'=>'ETCH-113-2',
-        'subtopic_code'=>'ETCH-113-2-13',
+        'subtopic_code'=>'ETCH-113-2-14',
     ]);
 
     DB::table('sub_topics')->insert([

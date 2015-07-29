@@ -14,10 +14,15 @@ class CreateSubTopicsTable extends Migration {
 	{
 		Schema::create('sub_topics', function(Blueprint $table)
 		{
-			$table->increments('id');
+
 			$table->string('name');
 			$table->string('subtopic_code');
-			$table->string('topic_code')->references('topic_code')->on('topics');
+			$table->primary('subtopic_code');
+			$table->string('topic_code');
+			$table->foreign('topic_code')->references('topic_code')->on('topics');
+			$table->string('subject_code');
+
+
 		});
 	}
 

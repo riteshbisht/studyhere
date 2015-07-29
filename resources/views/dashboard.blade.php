@@ -1,7 +1,9 @@
 @extends('app')
 
 @section('content')
-
-<h1> {!!$name!!}</h1>
-
+<div class="container">
+  <div class="row">
+      
+  </div>
+</div>
 @endsection

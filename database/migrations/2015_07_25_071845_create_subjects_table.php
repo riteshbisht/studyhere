@@ -14,14 +14,19 @@ class CreateSubjectsTable extends Migration {
 	{
 		Schema::create('subjects', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->string('subject_code',10)->unique();
+
+			$table->string('subject_code');
+		$table->primary('subject_code');
 			$table->string('name',40);
 			$table->string('branch',20);
-			$table->string('course_code')->references('course_code')->on('courses');
+			$table->string('course_code');
 			$table->integer('semester');
 			$table->integer('year');
+		$table->foreign('course_code')->references('course_code')->on('courses');
 		});
+
+
+
 	}
 
 	/**

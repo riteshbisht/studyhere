@@ -1,17 +1,21 @@
-
+/*
 .login-box{
   position:relative;
   margin: 10px auto;
-  width: 500px;
-  height: 380px;
-  background-color: #fff;
+  width: inherit;
+  height: inherit;
+
   padding: 10px;
   border-radius: 3px;
   -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
 -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
 box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+}*/
+.socialicon{
+  width:80px;
+  height:80px;
 }
-.lb-header{
+/*.lb-header{
   position:relative;
   color: #00415d;
   margin: 5px 5px 10px 5px;
@@ -34,16 +38,16 @@ box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
 .lb-header .active{
   color: #029f5b;
   font-size: 18px;
-}
-.social-login{
+}*/
+/*.social-login{
   position:relative;
   float: left;
   width: 100%;
   height:auto;
   padding: 10px 0 15px 0;
   border-bottom: 1px solid #eee;
-}
-.social-login a{
+}*/
+/*.social-login a{
   position:relative;
   float: left;
   width:calc(40% - 8px);
@@ -56,19 +60,19 @@ box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
   text-transform: uppercase;
   margin: 0 3%;
   text-align:center;
-}
-.social-login a i{
+}*/
+/*.social-login a i{
   position: relative;
   float: left;
   width: 20px;
   top: 2px;
-}
-.social-login a:first-child{
+}*/
+/*.social-login{
   background-color: #49639F;
 }
 .social-login a:last-child{
   background-color: #DF4A32;
-}
+}*/
 .email-login,.email-signup{
   position:relative;
   float: left;

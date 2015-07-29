@@ -12,8 +12,7 @@ return [
 	| based drivers are available for your choosing. Just store away!
 	|
 	| Supported: "local", "s3", "rackspace"
-	|
-	*/
+	|	*/
 
 	'default' => 'local',
 
