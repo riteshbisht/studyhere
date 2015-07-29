@@ -19,6 +19,7 @@
 	<![endif]-->
 </head>
 
+<<<<<<< HEAD
 
 	<nav class="light-blue lighten-1" role="navigation">
 		<div class="nav-wrapper container-fluid"><a id="logo-container" href="#" class="brand-logo">Logo</a>
@@ -36,6 +37,31 @@
 			</ul>
 			<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 		</div>
+=======
+<body style="background:url('../images/back.jpg');background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;">
+
+	<div class="navbar-fixed ">
+		<nav>
+			<div class="nav-wrapper green accent-2">
+				<a href="#!" class="brand-logo right black-text">STUDYHERE</a>
+				<ul class="left hide-on-med-and-down">
+					<li class="active"><a href="{{url('/')}}" class="black-text">HOME</a></li>
+					<li><a href="collapsible.html" class="black-text">CONTACT</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	</div>
+	</div>
+>>>>>>> f63b09aabf3b2852030aa4571a8ca439105bd055
 	</nav>
 
 
