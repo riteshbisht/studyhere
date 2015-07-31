@@ -26,7 +26,7 @@ public function login()
 
 	$helper = $fb->getRedirectLoginHelper();
 $permissions = ['email', 'public_profile']; // optional
-$loginUrl = $helper->getLoginUrl('http://ritesh.app/login/fb/callback', $permissions);
+$loginUrl = $helper->getLoginUrl('login/fb/callback', $permissions);
 
 
 
