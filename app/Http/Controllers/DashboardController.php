@@ -16,8 +16,11 @@ class DashboardController extends Controller {
 		{
 		return \View::make('dashboard')->with('name','ritesh');
 	}
-	return Redirect::to('auth/login');
+	else {
+		
 
+	return Redirect::to('/home');
+}
 
 
 	}

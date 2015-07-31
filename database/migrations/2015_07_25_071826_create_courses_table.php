@@ -14,10 +14,11 @@ class CreateCoursesTable extends Migration {
 	{
 		Schema::create('courses', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->string('course_code',10)->unique();
+			$table->string('course_code');
+			$table->primary(['course_code']);
+			$table->string('university_code',10);
 			$table->string('name',30);
-			$table->string('university_code',10)->references('university_code')->on('universities');
+			$table->foreign('university_code')->references('university_code')->on('universities');
 
 		});
 	}

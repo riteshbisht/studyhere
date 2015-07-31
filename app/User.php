@@ -16,13 +16,13 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 * @var string
 	 */
 	protected $table = 'users';
-
+	protected $primaryKey = 'email';
 	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password'];
+	protected $fillable = ['name', 'email', 'password','confirmed'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -33,7 +33,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 	public function profiles()
 	{
-			return $this->hasMany('App\Profile');
+			return $this->hasOne('App\Profile','email','email');
 	}
 
 }

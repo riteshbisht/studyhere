@@ -11,40 +11,16 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/login.css" type="text/css" rel="stylesheet" media="screen,projection" />
-
+  <style>
+    .socialicon {
+      width: 80px;
+      height: 80px;
+    }
+  </style>
 
 </head>
 
 <body>
-<script>
-//   logInWithFacebook = function() {
-//     FB.login(function(response) {
-//       if (response.authResponse) {
-//
-//       window.location = "http://ritesh.app/fb-login";
-//       } else {
-//         alert('User cancelled login or did not fully authorize.');
-//       }
-//     });
-//     return false;
-//   };
-//   window.fbAsyncInit = function() {
-//     FB.init({
-//       appId: '709854915792963',
-//       cookie: true, // This is important, it's not enabled by default
-//       version: 'v2.2'
-//     });
-//   };
-//
-//   (function(d, s, id){
-//     var js, fjs = d.getElementsByTagName(s)[0];
-//     if (d.getElementById(id)) {return;}
-//     js = d.createElement(s); js.id = id;
-//     js.src = "//connect.facebook.net/en_US/sdk.js";
-//     fjs.parentNode.insertBefore(js, fjs);
-//   }(document, 'script', 'facebook-jssdk'));
- </script>
-
 
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
@@ -58,90 +34,184 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br>
-      <br>
-      <h1 class="header center orange-text">HEADING</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">describe concept in one line</h5>
-      </div>
-      <div class="row center">
 
+  <!--
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal" style="width:70%" ;>
+    <div class="modal-content">
+      <div class="container-fluid">
 
+        <a href="#close" id="close_button" title="Close" class="close" style="	position:absolute;right:6px;top:6px;">X</a>
 
+        <div class="row card-panel none z-depth-5">
+          <div class="col s6 m6 l6 center-align">
+            <a href="#" class="btn-large  orange active " id="login-box-link">Login</a>
+          </div>
+          <div class="col s6 m6 l6 center-align">
+            <a href="#" class=" btn-large orange " id="signup-box-link">Sign Up</a>
+          </div>
+        </div>
 
+        <!-- end of first row-->
 
-        <a href="#openModal" id="download-button" class="btn-large waves-effect waves-light orange">Get started</a>
-
-        <div id="openModal" class="modalDialog">
-          <div>
-            <a href="#close" title="Close" class="close">X</a>
-            <br>
-            <br>
-            <div class="login-box">
-              <div class="lb-header">
-                <a href="#" class="active" id="login-box-link">Login</a>
-                <a href="#" id="signup-box-link">Sign Up</a>
+        <div class="row  " id="easylogin">
+          <div class="row " style="display:block;">
+            <a href="/login/fb">
+              <div class="col s6 m6 l6">
+                <div class="row center-align">
+                  <img class="socialicon" src="images/fb.png" />
+                </div>
+                <div class="row center-align">
+                  Login in with facebook
+                </div>
               </div>
-              <div class="social-login">
-                <a href="/login/fb" onClick="logInWithFacebook()">
-        <i class="fa fa-facebook fa-lg"></i>
-        Login in with facebook
-      </a>
-                <span>  <a href="#">
-                    <i class="fa fa-google-plus fa-lg"></i> log in with Google
-                  </a></span>
+            </a>
 
-
+            <a href="#">
+              <div class="col s6 m6 l6">
+                <div class="row center-align">
+                  <img class="socialicon" src="images/gplus.png" />
+                </div>
+                <div class="row center-align">
+                  Login in with Google
+                </div>
               </div>
-              <form class="email-login">
-                <div class="u-form-group">
-                  <input type="email" placeholder="Email" />
+            </a>
+
+          </div>
+        </div>
+          <!-- end of second row-->
+
+          <div class="row">
+            <div class="col s6 m6 l6 offset-s3 offset-m3 offset-l3 ">
+              <form class="email-login" method="POST" action="{{ url('/auth/login') }}">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" type="email" class="validate" name="email">
+                    <label for="email">Email</label>
+                  </div>
                 </div>
-                <div class="u-form-group">
-                  <input type="password" placeholder="Password" />
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input id="password" type="password" class="validate" name="password">
+                    <label for="password">Password</label>
+                  </div>
                 </div>
-                <div class="u-form-group">
-                  <button>Log in</button>
+
+                <div >
+                  <button class="btn btn-lg">Log in</button>
                 </div>
-                <div class="u-form-group">
+                <div >
                   <a href="#" class="forgot-password">Forgot password?</a>
-                </div>
-              </form>
-              <form class="email-signup">
-                <div class="u-form-group">
-                  <input type="email" placeholder="Email" />
-                </div>
-                <div class="u-form-group">
-                  <input type="password" placeholder="Password" />
-                </div>
-                <div class="u-form-group">
-                  <input type="password" placeholder="Confirm Password" />
-                </div>
-                <div class="u-form-group">
-                  <button>Sign Up</button>
                 </div>
               </form>
             </div>
 
           </div>
+          <!-- end of third row-->
+          <div class="row">
+            <div class="col s6 m6 l6 offset-s3  offset-m3 offset-l3 ">
+            <form class="email-signup" method="POST" action="{{ url('/auth/register') }}">
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input name="name" type="text" class="validate">
+                  <label for="first_name">Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" class="validate" name="email">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+
+              <div class="u-form-group">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">vpn_key</i>
+                  <input id="password" type="password" class="validate" name="password">
+                  <label for="password">Password</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">vpn_key</i>
+                  <input id="password" type="password" class="validate" name="password_confirmation">
+                  <label for="password">Password</label>
+                </div>
+              </div>
+
+
+
+              <div class="bt btn-lg">
+                <button>Sign Up</button>
+              </div>
+
+            </form>
+          </div>
         </div>
+          <!--end of fourth row-->
+
+        </div>
+      </div>
+      <!-- end of container -->
+    </div>
+
+  </div>
 
 
+  <!---modal ends-->
 
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br>
+      <br>
+      <div>
+        @if($errors->has()) @foreach ($errors->all() as $error)
 
+        <div>{{ $error }}</div>
+        @endforeach @endif
+      </div>
 
+      <h1 class="header center orange-text">TUTELAGE</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">describe concept in one line</h5>
+      </div>
+      <div class="row center">
 
-
-
+        <a href="#openModal" id="download-button" class="btn-large waves-effect waves-light orange">Get started</a>
 
 
       </div>
-      <br>
-      <br>
-
     </div>
+
+
+
+    <iframe width="420" height="345"
+    src="http://www.youtube.com/embed/XGSy3_Czz8k">
+    </iframe>
+
+
+
+
+
+
+
+  </div>
+  <br>
+  <br>
+
+  </div>
   </div>
 
 
@@ -229,6 +299,54 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+
+      $("#download-button").click(function() {
+        $('#modal1').openModal();
+
+
+      });
+
+      $("#close_button").click(function() {
+        $('#modal1').closeModal();
+
+
+      });
+      $("#signup-box-link").click(function() {
+        $("#easylogin").fadeOut(100);
+          $(".email-login").fadeOut(100,function(){
+              $(".email-signup").fadeIn(700);
+
+          });
+
+
+
+
+
+        // $("#login-box-link").toggleClass("active");
+        // $("#signup-box-link").toggleClass("active");
+      });
+
+      $("#login-box-link").click(function() {
+        $("#easylogin").fadeIn(700);
+
+
+        $(".email-signup").fadeOut(100,function(){
+
+              $(".email-login").fadeIn(700);
+        });
+
+        $("#login-box-link").toggleClass("active");
+        $("#signup-box-link").toggleClass("active");
+      });
+
+    });
+  </script>
 
 </body>
 

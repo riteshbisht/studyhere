@@ -285,7 +285,7 @@ public function run()
             DB::table('topics')->insert([
                 'subject_code'=>'ETSH-109',
                 'name'=>'Professional Responsibilities',
-                'topic_code'=>'ETSH-109-9',
+                'topic_code'=>'ETSH-109-10',
                 'overview'=>'',
                 'unit'=>4,
             ]);
