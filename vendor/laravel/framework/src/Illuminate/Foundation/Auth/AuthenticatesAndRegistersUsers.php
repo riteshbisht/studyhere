@@ -108,10 +108,7 @@ $confirmation_code = str_random(30);
 
 			if ($this->auth->attempt($credentials, $request->has('remember')))
 			{
-				$completeprofilevariable=$confirm->completeprofile;
-				$user->completeprofile=1;
-				$user->save();
-				return redirect()->intended($this->redirectPath($completeprofilevariable));
+				return redirect()->intended($this->redirectPath());
 			}
 
 
@@ -156,12 +153,6 @@ $confirmation_code = str_random(30);
 		{
 			return $this->redirectPath;
 		}
-
-			if($completeprofilepage==0)
-			{
-
-				return property_exists($this, 'redirectTo') ? $this->redirectTo : '/completeprofile';
-			}
 		return property_exists($this, 'redirectTo') ? $this->redirectTo : '/dashboard';
 	}
 
