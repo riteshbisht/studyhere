@@ -147,7 +147,7 @@ $confirmation_code = str_random(30);
 	 *
 	 * @return string
 	 */
-	public function redirectPath($completeprofilepage)
+	public function redirectPath()
 	{
 		if (property_exists($this, 'redirectPath'))
 		{
