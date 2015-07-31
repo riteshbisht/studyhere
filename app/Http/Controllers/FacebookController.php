@@ -26,7 +26,7 @@ public function login()
 
 	$helper = $fb->getRedirectLoginHelper();
 $permissions = ['email', 'public_profile']; // optional
-$loginUrl = $helper->getLoginUrl('login/fb/callback', $permissions);
+$loginUrl = $helper->getLoginUrl('http://studyhere-audiodict.rhcloud.com/login/fb/callback', $permissions);
 
 
 
