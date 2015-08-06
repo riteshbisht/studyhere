@@ -17,7 +17,9 @@ return array(
     'CreateSubjectsTable' => $baseDir . '/database/migrations/2015_07_25_071845_create_subjects_table.php',
     'CreateTopicsTable' => $baseDir . '/database/migrations/2015_07_25_071903_create_topics_table.php',
     'CreateUniversitiesTable' => $baseDir . '/database/migrations/2015_07_25_071745_create_universities_table.php',
+    'CreateUserFeedbackOnVideosTable' => $baseDir . '/database/migrations/2015_08_02_100110_create_user_feedback_on_videos_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
+    'CreateVideosTable' => $baseDir . '/database/migrations/2015_08_02_090847_create_videos_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
@@ -3475,4 +3477,5 @@ return array(
     'TopicTableSeeder' => $baseDir . '/database/seeds/TopicTableSeeder.php',
     'UniversityTableSeeder' => $baseDir . '/database/seeds/UniversityTableSeeder.php',
     'UserTableSeeder' => $baseDir . '/database/seeds/UserTableSeeder.php',
+    'VideoTableSeeder' => $baseDir . '/database/seeds/VidoeTableSeeder.php',
 );

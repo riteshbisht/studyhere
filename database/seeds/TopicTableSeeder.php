@@ -169,7 +169,8 @@ public function run()
         'unit'=>3,
     ]);
     DB::table('topics')->insert([
-        'subject_code'=>'ETME-105',
+        'subject_code'=>'ETME-
+        105',
         'name'=>'Sheet Metal Work',
         'topic_code'=>'ETME-105-6',
         'overview'=>'',

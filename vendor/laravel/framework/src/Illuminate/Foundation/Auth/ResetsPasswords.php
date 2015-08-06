@@ -112,6 +112,7 @@ trait ResetsPasswords {
 		switch ($response)
 		{
 			case PasswordBroker::PASSWORD_RESET:
+
 				return redirect($this->redirectPath());
 
 			default:

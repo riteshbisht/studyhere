@@ -34,6 +34,14 @@ Route::controllers([
  	'auth' => 'Auth\AuthController',
  'password' => 'Auth\PasswordController',
  ]);
+ Route::get('/sendemail',function(){
+
+  return view('auth/password');
+ });
+ Route::get('/reset',function(){
+
+  return view('auth/reset');
+ });
 Route::get('/', 'HomeController@start');
 Route::get('/home', 'HomeController@start');
 Route::get('/dashboard', 'DashboardController@start');
@@ -47,15 +55,18 @@ else {
 return Redirect::to('/home');
 }
 
-
 });
+Route::get('/videos','VideoController@initial');
+Route::get('/videos/{videoId}','VideoController@getById');
 Route::get('login/fb', 'FacebookController@login');
 Route::get('login/fb/callback', 'FacebookController@loginCallback');
 Route::post('doverification',function(){
-
 return View('emailverify')->with ('message',$message);
 });
+Route::get('/test',function(){
 
+  return view('test')->with('name','ritesh');
+});
 Route::get('register/verify/{confirmationCode}','RegistrationController@confirm');
 
 

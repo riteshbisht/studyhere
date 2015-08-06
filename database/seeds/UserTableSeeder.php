@@ -9,10 +9,9 @@ public function run()
 {
     DB::table('users')->insert([
 
-        'name'     => 'Chris Sevilleja',
-        'username' => 'sevilayha',
-        'email'    => 'chris@scotch.io',
-        'password' => Hash::make('awesome'),
+        'name'     => 'ritesh bisht',
+        'email'    => 'ritesh.bisht93@gmail.com',
+        'password' => Hash::make('ritesh'),
     ]);
 }
 

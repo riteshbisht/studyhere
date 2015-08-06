@@ -20,6 +20,8 @@ class CreateContentsTable extends Migration {
 			$table->string('source');
 			$table->string('urlofcloud');
 			$table->foreign('subtopic_code')->references('subtopic_code')->on('sub_topics');
+			$table->integer('pluscount');
+			$table->integer('negcount');
 			$table->timestamps();
 		});
 	}

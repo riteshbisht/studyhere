@@ -82,7 +82,7 @@
         </div>
           <!-- end of second row-->
 
-          <div class="row">
+          <div class="row ">
             <div class="col s6 m6 l6 offset-s3 offset-m3 offset-l3 ">
               <form class="email-login" method="POST" action="{{ url('/auth/login') }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -102,11 +102,11 @@
                   </div>
                 </div>
 
-                <div >
+                <div clas="row" >
                   <button class="btn btn-lg">Log in</button>
                 </div>
-                <div >
-                  <a href="#" class="forgot-password">Forgot password?</a>
+                <div  class="row">
+                  <a href="{{ url('/sendemail') }}" class="forgot-password"><h6 class="center">Forgot password?</h6></a>
                 </div>
               </form>
             </div>
@@ -115,7 +115,7 @@
           <!-- end of third row-->
           <div class="row">
             <div class="col s6 m6 l6 offset-s3  offset-m3 offset-l3 ">
-            <form class="email-signup" method="POST" action="{{ url('/auth/register') }}">
+            <form class="email-signup" method="POST" action="{{ url('/auth/register') }}" style="display:none;">
 
               <div class="row">
                 <div class="input-field col s12">
@@ -152,9 +152,8 @@
               </div>
 
 
-
-              <div class="bt btn-lg">
-                <button>Sign Up</button>
+              <div class="row">
+                <button class="bt btn-lg">Sign Up</button>
               </div>
 
             </form>
@@ -197,9 +196,6 @@
 
 
 
-    <iframe width="420" height="345"
-    src="http://www.youtube.com/embed/XGSy3_Czz8k">
-    </iframe>
 
 
 
@@ -220,7 +216,7 @@
 
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m4">
+        <div class="col s12 m3">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">view_module</i></h2>
             <h5 class="center">View notes online</h5>
@@ -229,7 +225,7 @@
           </div>
         </div>
 
-        <div class="col s12 m4">
+        <div class="col s12 m3">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
             <h5 class="center">Connect with various students</h5>
@@ -238,7 +234,7 @@
           </div>
         </div>
 
-        <div class="col s12 m4">
+        <div class="col s12 m3">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
             <h5 class="center">Easy to work with</h5>
@@ -246,6 +242,17 @@
             <p class="light">some description</p>
           </div>
         </div>
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">videocam</i></h2>
+            <h5 class="center">Video Lectures</h5>
+
+            <p class="light">some Description </p>
+          </div>
+        </div>
+
+
       </div>
 
     </div>
@@ -258,37 +265,10 @@
   </div>
 
   <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
     <div class="footer-copyright">
       <div class="container">
-        Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        Made by <a class="orange-text text-lighten-3" href="http://madspot.in">Tutelage</a>
       </div>
     </div>
   </footer>

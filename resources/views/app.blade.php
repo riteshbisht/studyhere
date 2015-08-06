@@ -26,7 +26,7 @@
 					<a class='dropdown-button' href="\home">{{ Auth::user()->name }} <span class="caret"></span></a>
 				</li>
 						<li class=" navbarli"><a href="{{ url('/auth/logout') }}">Logout</a></li>
-
+							<li class=" navbarli"><a href="{{ url('/videos') }}">Videos</a></li>
 			</ul>
 
 			<ul id="nav-mobile" class="side-nav">
