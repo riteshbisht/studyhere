@@ -34,7 +34,7 @@ trait AuthenticatesAndRegistersUsers {
 	 */
 	public function getRegister()
 	{
-		App::abort(404);
+	
 	}
 
 	/**
