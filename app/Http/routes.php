@@ -93,7 +93,9 @@ Route::post('doverification',function(){
 return View('emailverify')->with ('message',$message);
 });
 
-
+Route::get('/notes',function(){
+  return view('notes');
+});
 Route::get('register/verify/{confirmationCode}','RegistrationController@confirm');
 
 

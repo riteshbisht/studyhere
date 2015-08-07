@@ -18,14 +18,14 @@ public function run()
     DB::table('courses')->insert([
 
       'course_code'=>'BBAIPU',
-      'name'=>'Bachelor of Technolgy',
+      'name'=>'Bachelor of Buisness Administartion',
       'university_code'=>'IPU',
 
     ]);
     DB::table('courses')->insert([
 
       'course_code'=>'MBAIPU',
-      'name'=>'Bachelor of Technolgy',
+      'name'=>'Master of Business Administration',
       'university_code'=>'IPU',
 
 

@@ -13,6 +13,7 @@
 
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/icons.css">
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
@@ -20,10 +21,7 @@
 
 
   <style>
-  .maincontainericon{
-  width:40px;
-  height:40px;
-  }
+
 .contributorname
 {
   margin-left:20px;
@@ -34,36 +32,8 @@
 {
   padding:10px;
 }
-  .sidebartext
-  {
-font-family:cursive;
-font-size:14px;
-padding:10px;
-  }
 
 
-.insidepanelicon
-{
-width:30px;
-height:30px;
-}
-
-  .icons
-  {
-    width:40px;
-    height:40px;
-    border-radius:5px;
-    ;
-  }
-  .borderradius
-  {
-    padding:20px;
-    border-radius:40px;
-  }
-    .socialicon {
-      width: 80px;
-      height: 80px;
-    }
   </style>
 
 </head>
@@ -112,8 +82,8 @@ height:30px;
 
       </div>
                 <ul class="nav nav-sidebar sidebarul">
-                  <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/notesicon.png"></span><span class="sidebartext">Notes</span></a></li>
+                  <li ><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                  <li class="active"><a href="/notes"><span> <img  class="icons" src="images/notesicon.png"></span><span class="sidebartext">Notes</span></a></li>
                   <li><a href="#"><span> <img  class="icons" src="images/videosicon.jpg"></span><span class="sidebartext">Videos</span></a></li>
                   <li><a href="#"><span> <img  class="icons" src="images/communityicon.jpg"></span><span class="sidebartext">Community</span></a></li>
                   <li><a href="#"><span> <img  class="icons" src="images/circleicon.png"></span><span class="sidebartext">Circle</span></a></li>

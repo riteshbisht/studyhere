@@ -26,11 +26,7 @@ public function login()
 
 	$helper = $fb->getRedirectLoginHelper();
 $permissions = ['email', 'public_profile']; // optional
-<<<<<<< HEAD
 $loginUrl = $helper->getLoginUrl('http://studyhere-audiodict.rhcloud.com/login/fb/callback', $permissions);
-=======
-$loginUrl = $helper->getLoginUrl('http://ritesh.app/login/fb/callback', $permissions);
->>>>>>> eab11f590f67da68da82983335fb634962f22834
 
 
 
@@ -81,44 +77,30 @@ $response = $fb->get('/me?fields=id,name,email', $access_token);
 
 						$user->name = $me['name'];
 						$user->email = $me['email'];
-<<<<<<< HEAD
-=======
 						$user->uid=$uid;
->>>>>>> eab11f590f67da68da82983335fb634962f22834
 						$user->save();
 
 
 						$profile = new App\Profile();
-<<<<<<< HEAD
+
 						$profile->photo='https://graph.facebook.com/'.$me['id'].'/picture?type=large';
 						$profile->uid = $uid;
 						$user->email = $me['email'];
-=======
 							$profile->photo='https://graph.facebook.com/'.$me['id'].'/picture?type=large';
 						$profile->uid = $uid;
->>>>>>> eab11f590f67da68da82983335fb634962f22834
+
 						$profile->username = $user['name'];
 						$profile = $user->profiles()->save($profile);
 				}
 
 				$profile->access_token = $access_token;
 				$profile->save();
-<<<<<<< HEAD
+
 				$user = $profile->users;
 			Auth::login($user);
 
-=======
 
-				$user = $profile->users;
 
-			Auth::login($user);
-			if($user->completeprofilepage==0)
-			{
-				$user->completeprofilepage=1;
-				$user->save();
-				return Redirect::to('/completeprofile');
-			}
->>>>>>> eab11f590f67da68da82983335fb634962f22834
 
 
 return Redirect::to('/dashboard');

@@ -1,0 +1,33 @@
+.maincontainericon{
+width:40px;
+height:40px;
+}
+.insidepanelicon
+{
+width:30px;
+height:30px;
+}
+.icons
+{
+  width:40px;
+  height:40px;
+  border-radius:5px;
+  ;
+}
+.socialicon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sidebartext
+  {
+font-family:cursive;
+font-size:14px;
+padding:10px;
+  }
+
+  .borderradius
+  {
+    padding:20px;
+    border-radius:40px;
+  }

@@ -2,15 +2,11 @@
 use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-<<<<<<< HEAD
 use App\Confirm;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-=======
 
-use Illuminate\Http\Request;
->>>>>>> eab11f590f67da68da82983335fb634962f22834
 
 class RegistrationController extends Controller {
 
@@ -21,7 +17,7 @@ class RegistrationController extends Controller {
             return $confirmation_code;
         }
 
-<<<<<<< HEAD
+
         $user = Confirm::whereConfirmationCode($confirmation_code)->first();
 
 
@@ -49,8 +45,6 @@ class RegistrationController extends Controller {
 
 
 
-
-=======
         $user = User::whereConfirmationCode($confirmation_code)->first();
 
         if ( ! $user)
@@ -66,6 +60,6 @@ class RegistrationController extends Controller {
 
       //  return Redirect::route('login_path');
     }
->>>>>>> eab11f590f67da68da82983335fb634962f22834
+
 
 }

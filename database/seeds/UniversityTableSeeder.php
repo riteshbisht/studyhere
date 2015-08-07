@@ -14,6 +14,12 @@ public function run()
         'university_code'=>'IPU',
         'name'     => 'Guru Gobind Singh University',
     ]);
+
+    DB::table('universities')->insert([
+
+        'university_code'=>'MTU',
+        'name'     => 'Mahamaya Technical University',
+    ]);
 }
 
 }
