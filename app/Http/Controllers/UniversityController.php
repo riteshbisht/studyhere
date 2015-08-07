@@ -7,7 +7,10 @@ use Illuminate\Support\Facades\Validator;
 
 class UniversityController extends Controller
 {
+<<<<<<< HEAD
   
+=======
+>>>>>>> eab11f590f67da68da82983335fb634962f22834
     public function getAll()
     {
         $university = University::get();

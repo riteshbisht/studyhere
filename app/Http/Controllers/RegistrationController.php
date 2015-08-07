@@ -2,10 +2,15 @@
 use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 use App\Confirm;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+=======
+
+use Illuminate\Http\Request;
+>>>>>>> eab11f590f67da68da82983335fb634962f22834
 
 class RegistrationController extends Controller {
 
@@ -16,6 +21,7 @@ class RegistrationController extends Controller {
             return $confirmation_code;
         }
 
+<<<<<<< HEAD
         $user = Confirm::whereConfirmationCode($confirmation_code)->first();
 
 
@@ -44,5 +50,22 @@ class RegistrationController extends Controller {
 
 
 
+=======
+        $user = User::whereConfirmationCode($confirmation_code)->first();
+
+        if ( ! $user)
+        {
+            return view("doverification")->with(['message'=>'you are  already registered user please login',"button_message"=>'Login','button_url'=>'/home']);
+        }
+
+        $user->confirmed = 1;
+        $user->confirmation_code = null;
+        $user->save();
+
+        return view('doverification')->with(['message'=>'your account has been verifed !!!','button_message'=>'Login','button_url'=>'/home']);
+
+      //  return Redirect::route('login_path');
+    }
+>>>>>>> eab11f590f67da68da82983335fb634962f22834
 
 }

@@ -12,7 +12,9 @@
 		"league/flysystem": "^1.0",
 	 "laracasts/flash": "~1.3",
 	 "predis/predis": "~1.1@dev",
-		"vinelab/http": "^1.2"
+		"vinelab/http": "^1.2",
+	 "predis/predis": "~1.1@dev"
+
 
 	},
 	"require-dev": {

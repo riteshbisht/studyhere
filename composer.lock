@@ -5,6 +5,9 @@
         "This file is @generated automatically"
     ],
     "hash": "c8f24eebcf9fcc0fb1065904eebd4e05",
+
+    "hash": "c263d6411a44d810491ad24bc2111c27",
+
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1024,7 +1027,11 @@
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/nrk/predis/zipball/6bc1a38123f61efde92d8b4a73adabf168e09442",
+=======
+                "url": "https://api.github.com/repos/nrk/predis/zipball/ebb72377bb7c2a10b8b57dbf5ad1d3b1f45d0569",
+>>>>>>> eab11f590f67da68da82983335fb634962f22834
                 "reference": "ebb72377bb7c2a10b8b57dbf5ad1d3b1f45d0569",
                 "shasum": ""
             },

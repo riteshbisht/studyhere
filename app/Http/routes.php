@@ -34,6 +34,7 @@ Route::controllers([
  	'auth' => 'Auth\AuthController',
  'password' => 'Auth\PasswordController',
  ]);
+
  Route::get('/sendemail',function(){
 
   return view('auth/password');
@@ -67,6 +68,32 @@ Route::get('/test',function(){
 
   return view('test')->with('name','ritesh');
 });
+
+Route::get('/', 'HomeController@start');
+Route::get('/home', 'HomeController@start');
+Route::get('/dashboard', 'DashboardController@start');
+
+Route::get('/completeprofile', function(){
+  if(Auth::check())
+  {
+  return \View::make('completeprofile')->with('name','ritesh');
+}
+else {
+
+
+return Redirect::to('/home');
+}
+
+
+});
+Route::get('login/fb', 'FacebookController@login');
+Route::get('login/fb/callback', 'FacebookController@loginCallback');
+Route::post('doverification',function(){
+
+return View('emailverify')->with ('message',$message);
+});
+
+
 Route::get('register/verify/{confirmationCode}','RegistrationController@confirm');
 
 

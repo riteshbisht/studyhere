@@ -42,6 +42,8 @@
       <div class="row center-align">
         <input type="submit"class="btn btn-lg orange"></button>
               <button class="btn btn-lg orange"><a href="{{url('/dashboard')}}">Skip</a></button>
+
+              <button class="btn btn-lg orange"><a href="{{url('/dasboard')}}">Skip</a></button>
       </div>
     </form>
 </div>

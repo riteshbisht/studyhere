@@ -43,7 +43,7 @@
 
         <a href="#close" id="close_button" title="Close" class="close" style="	position:absolute;right:6px;top:6px;">X</a>
 
-        <div class="row card-panel none z-depth-5">
+        <div class="row card-padoverificationnel none z-depth-5">
           <div class="col s6 m6 l6 center-align">
             <a href="#" class="btn-large  orange active " id="login-box-link">Login</a>
           </div>
