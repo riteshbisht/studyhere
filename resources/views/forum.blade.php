@@ -100,18 +100,46 @@
 </div>
 
 <script>
-
-$('window').load(function(){
-
-  setInterval('chat.update('+$('#forum_id').val()+')', 5000);
-})
 var instanse=false;
 var state=0;
-function Chat () {
-    this.update = updateChat;
-    this.send = sendChat;
-    this.getStateAndLoad = getStateAndLoadChat;
+function call_update()
+{
+
+  $forum_id=$('#forum_id').val();
+  updateChat($forum_id);
+instanse=false;
+    setTimeout(call_update,5000);
+
 }
+$('document').ready(function(){
+
+  call_update();
+
+  function Chat () {
+      this.update = updateChat;
+      this.send = sendChat;
+      this.getStateAndLoad = getStateAndLoadChat;
+  }
+
+  var chat =  new Chat();
+
+chat.getStateAndLoad();
+$('#sendie').click(function(e) {
+
+           var message=$('#comment').val();
+           $('#comment').val('');
+if(message=='')
+{
+console.log("empty");
+}
+else {
+// send
+
+chat.send(message);
+}
+});
+});
+
 
 
 //load the inital chat
@@ -119,7 +147,9 @@ function Chat () {
 
 //gets the state of the chat
 function getStateAndLoadChat() {
+
 	if(!instanse){
+
 		instanse = true;
     var forum_id=$('#forum_id').val();
 
@@ -130,6 +160,8 @@ function getStateAndLoadChat() {
 			dataType: "json",
 			success: function(data) {
 instanse = false;
+
+console.log(data);
         var messagearr=data.messages;
         //load the chat
         for(i=0;i<messagearr.length;i++)
@@ -150,7 +182,7 @@ instanse = false;
 function updateChat(forum_id) {
 
 	if(!instanse){
-
+console.log("its okk");
 		instanse = true;
 
 		$.ajax({
@@ -196,49 +228,7 @@ function sendChat(message) {
 		}
 	});
 }
-var chat =  new Chat();
 
-  $(function() {
-
-chat.getStateAndLoad();
-
-     // watch textarea for key presses
-     $("#sendie").keydown(function(event) {
-
-         var key = event.which;
-
-         //all keys including return.
-         if (key >= 33) {
-
-             var maxLength = $(this).attr("maxlength");
-             var length = this.value.length;
-
-             // don't allow new content if length is maxed out
-             if (length >= maxLength) {
-                 event.preventDefault();
-             }
-         }
-                                                                                                     });
-     // watch textarea for release of key press
-     $('#sendie').click(function(e) {
-
-                var message=$('#comment').val();
-                $('#comment').val('');
-if(message=='')
-{
-console.log("empty");
-}
-else {
-  // send
-
-    chat.send(message);
-}
-
-
-
-
-     });
-  });
 
 
 
