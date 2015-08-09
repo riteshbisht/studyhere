@@ -122,7 +122,7 @@
         <li><img class="insidepanelicon" src="images/personicon.png"><span class="contributorname">Ajay Kumar</span> </li>
         <li> <img class="insidepanelicon" src="images/personicon.png"><span class="contributorname">Ritesh Bisht</span></li>
       </ul>
-        </div>
+    </div>
 
   </div>
 
@@ -228,11 +228,3 @@ $('document').ready(function(){
 </body>
 
 </html>
-
-@section('content')
-<div class="container">
-  <div class="row">
-
-  </div>
-</div>
-@endsection

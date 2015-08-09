@@ -84,11 +84,8 @@ $response = $fb->get('/me?fields=id,name,email', $access_token);
 						$profile = new App\Profile();
 
 						$profile->photo='https://graph.facebook.com/'.$me['id'].'/picture?type=large';
-						$profile->uid = $uid;
 						$user->email = $me['email'];
-							$profile->photo='https://graph.facebook.com/'.$me['id'].'/picture?type=large';
 						$profile->uid = $uid;
-
 						$profile->username = $user['name'];
 						$profile = $user->profiles()->save($profile);
 				}

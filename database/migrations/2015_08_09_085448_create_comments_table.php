@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateForumsTable extends Migration {
+class CreateCommentsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,13 @@ class CreateForumsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('forums', function(Blueprint $table)
+		Schema::create('comments', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('forum_id');
-			$table->string('forum_name');
-			$table->foreign('forum_id')->references('subtopic_code')->on('sub_topics');
+			$table->string('email');
+			$table->foreign('forum_id')->references('forum_id')->on('forums');
+			$table->string('message');
 			$table->timestamps();
 		});
 	}
@@ -29,7 +30,7 @@ class CreateForumsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('forums');
+		Schema::drop('comments');
 	}
 
 }

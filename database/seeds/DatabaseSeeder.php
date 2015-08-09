@@ -23,6 +23,8 @@ DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 				$this->call('SubTopicTableSeeder');
 				$this->call('ContentTableSeeder');
 				$this->call('VideoTableSeeder');
+				$this->call('ForumTableSeeder');
+				$this->call('CommentTableSeeder');
 
 
 	}

@@ -69,6 +69,13 @@ Route::get('/test',function(){
   return view('test')->with('name','ritesh');
 });
 
+Route::get('/forum',function(){
+
+  return view('forum');
+});
+
+Route::post('/forum','ForumController@handleChat');
+
 Route::get('/', 'HomeController@start');
 Route::get('/home', 'HomeController@start');
 Route::get('/dashboard', 'DashboardController@start');

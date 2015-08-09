@@ -6,14 +6,17 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CommentTableSeeder' => $baseDir . '/database/seeds/CommentTableSeeder.php',
     'ContentTableSeeder' => $baseDir . '/database/seeds/ContentTableSeeder.php',
     'CoursesTableSeeder' => $baseDir . '/database/seeds/CoursesTableSeeder.php',
+    'CreateCommentsTable' => $baseDir . '/database/migrations/2015_08_09_085448_create_comments_table.php',
     'CreateConfirmsTable' => $baseDir . '/database/migrations/2015_07_29_145929_create_confirms_table.php',
     'CreateContentsTable' => $baseDir . '/database/migrations/2015_07_26_101513_create_contents_table.php',
     'CreateCoursesTable' => $baseDir . '/database/migrations/2015_07_25_071826_create_courses_table.php',
     'CreateForumsTable' => $baseDir . '/database/migrations/2015_08_07_071842_create_forums_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateProfilesTable' => $baseDir . '/database/migrations/2015_07_24_093249_create_profiles_table.php',
+    'CreateRepliesTable' => $baseDir . '/database/migrations/2015_08_09_091905_create_replies_table.php',
     'CreateSubTopicsTable' => $baseDir . '/database/migrations/2015_07_25_071919_create_sub_topics_table.php',
     'CreateSubjectsTable' => $baseDir . '/database/migrations/2015_07_25_071845_create_subjects_table.php',
     'CreateTopicsTable' => $baseDir . '/database/migrations/2015_07_25_071903_create_topics_table.php',
@@ -25,6 +28,7 @@ return array(
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
+    'ForumTableSeeder' => $baseDir . '/database/seeds/ForumTableSeeder.php',
     'Google_Auth_Abstract' => $vendorDir . '/google/apiclient/src/Google/Auth/Abstract.php',
     'Google_Auth_AppIdentity' => $vendorDir . '/google/apiclient/src/Google/Auth/AppIdentity.php',
     'Google_Auth_AssertionCredentials' => $vendorDir . '/google/apiclient/src/Google/Auth/AssertionCredentials.php',
