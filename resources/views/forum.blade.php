@@ -17,7 +17,16 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+<style>
+.messagestyle
+{
+  font: normal small-caps normal 20px/1.4 Georgia;
+}
+.datetimestyle
+{
+  font: normal small-caps normal 11px/1.4 Georgia;
+}
+</style>
 </head>
 
 <body >
@@ -85,7 +94,6 @@
 
             </div>
 
-                <hr>
               <div class="row">
                 <label for="comment">Comment:</label>
         <textarea class="form-control" rows="5" id="comment"></textarea>
@@ -129,9 +137,10 @@ $('#sendie').click(function(e) {
 
            var message=$('#comment').val();
            $('#comment').val('');
+           $(this).attr("disabled", true);
 if(message=='')
 {
-console.log("empty");
+
 }
 else {
 // send
@@ -162,9 +171,9 @@ function getStateAndLoadChat() {
 			dataType: "json",
 			success: function(data) {
 instanse = false;
-console.log("inside getstate");
+
 allow=true;
-console.log(data);
+
         var messagearr=data.messages;
         //load the chat
       loaddata(messagearr);
@@ -184,8 +193,8 @@ function loaddata(messagearr)
   {
   for(i=0;i<messagearr.length;i++)
   {
-    $("#msgbox").append('<div class="row">'+messagearr[i].message+'</div><div class="row">'+messagearr[i].created_at+'</div>')
-
+    $("#msgbox").append('<div class="row messagestyle" >'+messagearr[i].message+'</div><div class="row datetimestyle">'+messagearr[i].created_at+'</div><hr>')
+ $("#sendie").attr("disabled", false);
   }
 }
 }
@@ -201,8 +210,7 @@ function updateChat(forum_id) {
 			data: {'function': 'update','state': state,'forum_id':forum_id},
 			dataType: "json",
 			success: function(data) {
-console.log("inside update");
-console.log(data);
+
         if(data.text==false)
         {
 
