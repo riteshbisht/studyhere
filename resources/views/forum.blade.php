@@ -102,18 +102,19 @@
 <script>
 var instanse=false;
 var state=0;
+var allow=false;
 function call_update()
 {
 
   $forum_id=$('#forum_id').val();
   updateChat($forum_id);
 instanse=false;
-    setTimeout(call_update,4000);
+    setTimeout(call_update,5000);
 
 }
 $('document').ready(function(){
 
-  call_update();
+
 
   function Chat () {
       this.update = updateChat;
@@ -138,6 +139,7 @@ else {
 chat.send(message);
 }
 });
+
 });
 
 
@@ -160,29 +162,37 @@ function getStateAndLoadChat() {
 			dataType: "json",
 			success: function(data) {
 instanse = false;
-
+console.log("inside getstate");
+allow=true;
 console.log(data);
         var messagearr=data.messages;
         //load the chat
-        for(i=0;i<messagearr.length;i++)
-        {
-          $("#msgbox").append('<div class="row">'+messagearr[i].message+'</div><div class="row">'+messagearr[i].created_at+'</div>')
-        }
+      loaddata(messagearr);
         state = data.state;
 
-
+call_update();
 
         }
 		});
 	}
   instanse = false;
 }
+function loaddata(messagearr)
+{
 
+  if(allow)
+  {
+  for(i=0;i<messagearr.length;i++)
+  {
+    $("#msgbox").append('<div class="row">'+messagearr[i].message+'</div><div class="row">'+messagearr[i].created_at+'</div>')
+
+  }
+}
+}
 //Updates the chat
 function updateChat(forum_id) {
 
 	if(!instanse){
-console.log("its okk");
 		instanse = true;
 
 		$.ajax({
@@ -191,24 +201,23 @@ console.log("its okk");
 			data: {'function': 'update','state': state,'forum_id':forum_id},
 			dataType: "json",
 			success: function(data) {
-        console.log(data);
+console.log("inside update");
+console.log(data);
         if(data.text==false)
         {
-console.log("no data");
+
         }
         else if(data.msg.length==0)
         {
-          console.log("array is empty")
+
         }
         else {
-
         var messagearr=data.msg;
-        $("#msgbox").append('<div class="row">'+messagearr[0].message+'</div><div class="row">'+messagearr[0].created_at+'</div>')
-
-        }
+        loaddata(messagearr);
           state = data.state;
   instanse = false;
 			}
+    }
 		});
 	}
 	else {
@@ -220,7 +229,6 @@ console.log("no data");
 //send the message
 function sendChat(message) {
   var forum_id=$('#forum_id').val();
-	updateChat(forum_id);
 
 	$.ajax({
 		type: "POST",
