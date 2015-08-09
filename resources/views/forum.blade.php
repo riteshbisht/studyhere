@@ -108,7 +108,7 @@ function call_update()
   $forum_id=$('#forum_id').val();
   updateChat($forum_id);
 instanse=false;
-    setTimeout(call_update,5000);
+    setTimeout(call_update,4000);
 
 }
 $('document').ready(function(){
@@ -191,9 +191,14 @@ console.log("its okk");
 			data: {'function': 'update','state': state,'forum_id':forum_id},
 			dataType: "json",
 			success: function(data) {
+        console.log(data);
         if(data.text==false)
         {
-
+console.log("no data");
+        }
+        else if(data.msg.length==0)
+        {
+          console.log("array is empty")
         }
         else {
 
