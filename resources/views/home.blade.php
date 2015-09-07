@@ -51,10 +51,11 @@
         @endforeach @endif
       </div>
 
-      <h1 class="header center white-text">TUTELAGE</h1>
       <div class="row center">
-        <img style="width:10%;height:10%;" src="images/logo.png"/>
+        <img style="width:30%;height:30%;" src="images/logo"/>
       </div>
+      <h1 class="header center black-text">TUTELAGE</h1>
+
       <div class="row center">
         <h5 class="header col s12 light">describe concept in one line</h5>
       </div>
