@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Redirect;
 
 class RegistrationController extends Controller {
 
+
+//confirm registrattion 
 	public function confirm($confirmation_code)
     {
         if( ! $confirmation_code)

@@ -15,6 +15,8 @@ class TopicController extends Controller
      *
      * @return Response
      */
+
+     //retunt all the topic of the subject
     public function showBySubject($code)
     {
         $subject_code =$code;
@@ -34,6 +36,9 @@ class TopicController extends Controller
 
         return response()->json(['error' => false, 'topic' => $topic]);
     }
+
+
+  ///return all the topic of a subject of a particular unit
 	public function showByUnit($code,$unit_no)
 		{
 				$validator = Validator::make(

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Validator;
 class UniversityController extends Controller
 {
 
+
+//retunr all the university
     public function getAll()
     {
         $university = University::get();
@@ -15,6 +17,7 @@ class UniversityController extends Controller
         return response()->json(['error' => false, 'topic' => $university]);
     }
 
+//retunr the university on the basis of code
     public function getByCode($code)
     {
         $validator = Validator::make(

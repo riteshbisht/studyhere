@@ -5,7 +5,12 @@ use App\Http\Controllers\Controller;
 use App\Content;
 use Illuminate\Http\Request;
 
+
+
 class ContentController extends Controller {
+
+
+//get all content by the subtopicid
 
 	public function showBySubTopicId($subtopic_code)
 	{

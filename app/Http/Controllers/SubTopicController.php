@@ -14,6 +14,8 @@ class SubTopicController extends Controller
      *
      * @return Response
      */
+
+     //return all the subtopic of particular topic 
     public function showByTopicId($topic_id)
     {
         $subtopic = Topic::find($topic_id)->subtopics;

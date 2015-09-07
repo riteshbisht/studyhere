@@ -14,6 +14,8 @@ use App;
 
 class FacebookController extends Controller {
 
+
+//initial request to facebook login
 public function login()
 {
 
@@ -25,6 +27,7 @@ public function login()
 
 
 	$helper = $fb->getRedirectLoginHelper();
+
 $permissions = ['email', 'public_profile']; // optional
 $loginUrl = $helper->getLoginUrl('http://studyhere-audiodict.rhcloud.com/login/fb/callback', $permissions);
 
@@ -33,6 +36,7 @@ $loginUrl = $helper->getLoginUrl('http://studyhere-audiodict.rhcloud.com/login/f
 	return Redirect::to($loginUrl);
 }
 
+// once user accept the permission
 public function loginCallback()
  {
 $fb = new Facebook([
@@ -72,6 +76,7 @@ $response = $fb->get('/me?fields=id,name,email', $access_token);
 	//return $user;
 				$profile = App\Profile::whereUid($uid)->first();
 
+//if user does not exist create user
 				if (empty($profile)) {
 						$user = new App\User;
 
@@ -90,10 +95,13 @@ $response = $fb->get('/me?fields=id,name,email', $access_token);
 						$profile = $user->profiles()->save($profile);
 				}
 
+//else only update his access token
 				$profile->access_token = $access_token;
 				$profile->save();
 
 				$user = $profile->users;
+
+				//login the user
 			Auth::login($user);
 
 

@@ -1,0 +1,97 @@
+/* CSS Document */
+#button1{
+margin-bottom:40px;
+margin-top:40px;
+
+height:70px;
+
+width:250px;
+background-color:brown;
+vertical-align:middle;
+
+font-size:16px;
+
+border-radius:20px;
+}
+#button1:hover{
+background-color:#5cbf2a;
+
+}
+#button1:active{
+
+	outline-width: 0%;
+}
+
+.foot {
+    position: fixed;
+    height: auto;
+    bottom: 0px;
+    width: 100%;
+    background-color:cyan;
+}
+.input-group{
+    width: 90%;
+
+}
+#side-bar{
+	position:absolute;
+	left:-20px;
+	width:300px;
+	z-index:9999
+}
+.profile-userpic img{
+  float: none;
+  margin-top:20px;
+  margin-left:70px;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+.profile-usertitle-name {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  margin-left: 90px;
+}
+
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: black;
+  color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: white;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}

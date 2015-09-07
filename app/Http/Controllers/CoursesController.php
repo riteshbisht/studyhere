@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Validator;
 
 class CoursesController extends Controller
 {
+
+  //get all the  courses
     public function getAll()
     {
         $courses = Course::get();
@@ -14,6 +16,7 @@ class CoursesController extends Controller
         return response()->json(['error' => false, 'topic' => $courses]);
     }
 
+//get all the courses by the university
     public function getByUniversity($code)
     {
         $university = Course::where('university_code', $code)->get();

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Vinelab\Http\Client as HttpClient;
 class VideoController extends Controller {
 
-	//
+	//return all the videos
 	public function initial()
 	{
 			$allvideo=Video::all();
@@ -15,7 +15,7 @@ class VideoController extends Controller {
 return view('video')->with('allvideos',$allvideo);
 	}
 
-
+//retunt a particular video by id
 	public function getById($videoid)
 	{
 

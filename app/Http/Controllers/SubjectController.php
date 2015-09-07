@@ -7,6 +7,8 @@ use App\Subject;
 
 class SubjectController extends Controller
 {
+
+  //return all the subject of a course
     public function showAllSubject($course_code)
     {
         $validator = Validator::make(
@@ -24,7 +26,7 @@ class SubjectController extends Controller
         return response()->json(['error' => false, 'couse_code' => $course_code, 'sub_topic' => $subject->toArray()]);
     }
 
-
+//return all the subject by the year
 		public function showAllSubjectByyear($course_code,$year)
     {
         $validator = Validator::make(
@@ -46,6 +48,8 @@ class SubjectController extends Controller
         return response()->json(['error' => false, 'couse_code' => $course_code, 'sub_topic' => $subject->toArray()]);
     }
 
+
+//returun all the subject by the semester
 		public function showAllSubjectBysemester($course_code,$semester)
     {
         $validator = Validator::make(

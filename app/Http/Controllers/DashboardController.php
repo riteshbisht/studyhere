@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller {
 
-	//
+	// retunr the dashboard if already login else homespage
 	public function start()
 	{
 		if(Auth::check())
@@ -17,7 +17,7 @@ class DashboardController extends Controller {
 		return \View::make('dashboard')->with('name','ritesh');
 	}
 	else {
-		
+
 
 	return Redirect::to('/home');
 }

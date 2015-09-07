@@ -10,11 +10,13 @@ use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
+
+  //if already login return dashboard
     public function start()
     {
 
         if (Auth::check()) {
-				//	dd("hello");
+
           return  Redirect::to('/dashboard');
         }
 else {
