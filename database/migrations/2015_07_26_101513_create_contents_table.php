@@ -22,6 +22,7 @@ class CreateContentsTable extends Migration {
 			$table->foreign('subtopic_code')->references('subtopic_code')->on('sub_topics');
 			$table->integer('pluscount');
 			$table->integer('negcount');
+			$table->integer('views');
 			$table->timestamps();
 		});
 	}
