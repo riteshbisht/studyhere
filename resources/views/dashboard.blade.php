@@ -33,12 +33,8 @@
 
 </head>
 <body style="background-image:url(images/1.jpg);">
+
  <nav class="navbar-fixed  sidebar-menu-collapsed grey darken-4">
-
-
-
-
-
 <div class="nav-wrapper container-fluid"><a id="logo-container"  class="brand-logo center"> tutelage</a>
 
 <div class="row">
