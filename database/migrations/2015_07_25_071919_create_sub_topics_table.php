@@ -20,7 +20,8 @@ class CreateSubTopicsTable extends Migration {
 			$table->primary('subtopic_code');
 			$table->string('topic_code');
 			$table->foreign('topic_code')->references('topic_code')->on('topics');
-	
+			$table->string('tag');
+			$table->string('importance_of_sub_topic');
 
 
 		});

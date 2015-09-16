@@ -23,6 +23,7 @@ class CreateContentsTable extends Migration {
 			$table->integer('pluscount');
 			$table->integer('negcount');
 			$table->integer('views');
+			$table->integer('noofimages');
 			$table->timestamps();
 		});
 	}

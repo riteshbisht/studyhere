@@ -7,4 +7,10 @@ class SubTopic extends Model {
 	//
 		protected $primaryKey = 'subtopic_code';
 
+
+		public function getSubtopic_code()
+		{
+			
+		}
+
 }

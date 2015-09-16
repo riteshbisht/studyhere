@@ -47,13 +47,15 @@ color:white;
           @endforeach @endif
         </div>
       </div>
+
+  
         <!-- Top content -->
         <div class="top-content">
 
             <div class="inner-bg">
                    <div class="container">
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-            <div class="panel panel-info" style="background:#757575;border:0px solid #757575 " >
+            <div class="panel panel-info" style="background:none;border:0px solid none " >
                     <div class="panel-heading" style="background:#212121;">
                         <div class="panel-title" style="color:white;">Sign In</div>
 

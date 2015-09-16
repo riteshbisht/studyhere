@@ -13,7 +13,7 @@ public function run()
         'name'=>'Leibnitz theorem for nth derivative (without proof)',
         'topic_code'=>'ETMA-101-1',
         'subtopic_code'=>'ETMA-101-1-1',
-
+        'tag'=>'leibnitz',
 
     ]);
 
@@ -1786,3 +1786,4 @@ public function run()
 }
 
 }
+//kaha se uthaaya h? ye database?
