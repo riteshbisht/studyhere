@@ -10,14 +10,14 @@ class SearchController extends Controller {
 
 	public function search($tag)
 	{
-		$tuple=SubTopic::where('tag',$tag)->get()->toArray();
+		$tuple=SubTopic::where('tags',$tag)->get()->toArray();
 		if($tuple==null)
 		{
 		 return view('search')->with('message','not found');
 		}
 		$tuple=$tuple[0];
 		$subtopic_code=$tuple['subtopic_code'];
-
+dd($subtopic_code);
 		$sources=Content::where('subtopic_code',$subtopic_code)->get()->toArray();
 
 			return view('search')->with('message',$sources);

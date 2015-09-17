@@ -366,7 +366,7 @@ public function run()
         'name'=>'Bessel’s and Legendre’s functions and their properties',
         'topic_code'=>'ETMA-101-8',
         'subtopic_code'=>'ETMA-101-8-9',
-'tags'=>'bessel's properties',
+'tags'=>'bessels properties',
 
     ]);
 
@@ -375,7 +375,7 @@ public function run()
         'name'=>'Bessel’s and Legendre’s functions and their properties',
         'topic_code'=>'ETMA-101-8',
         'subtopic_code'=>'ETMA-101-8-10',
-'tags'=>'legendre's properties',
+'tags'=>'legendre s properties',
 
     ]);
 
@@ -407,7 +407,7 @@ public function run()
         'name'=>'Newton’s rings',
         'topic_code'=>'ETPH-103-1',
         'subtopic_code'=>'ETPH-103-1-4',
-'tags'=>'newton's rings',
+'tags'=>'newtons rings',
     ]);
 
 
@@ -1151,14 +1151,14 @@ public function run()
         'name'=>'Thevenin’s',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-4',
-'tags'=>'Thevenin’s',
+'tags'=>'Thevenins',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Norton’s',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-5',
-'tags'=>'norton's',
+'tags'=>'nortons',
    ]);
 
     DB::table('sub_topics')->insert([

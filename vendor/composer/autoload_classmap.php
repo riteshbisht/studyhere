@@ -4181,8 +4181,7 @@ return array(
     'PHP_Token_XOR_EQUAL' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD_FROM' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
-<<<<<<< HEAD
-=======
+
     'PhpSpec\\CodeGenerator\\GeneratorManager' => $vendorDir . '/phpspec/phpspec/src/PhpSpec/CodeGenerator/GeneratorManager.php',
     'PhpSpec\\CodeGenerator\\Generator\\ClassGenerator' => $vendorDir . '/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/ClassGenerator.php',
     'PhpSpec\\CodeGenerator\\Generator\\CreateObjectTemplate' => $vendorDir . '/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/CreateObjectTemplate.php',
@@ -4806,7 +4805,7 @@ return array(
     'Psy\\Util\\Json' => $vendorDir . '/psy/psysh/src/Psy/Util/Json.php',
     'Psy\\Util\\Mirror' => $vendorDir . '/psy/psysh/src/Psy/Util/Mirror.php',
     'Psy\\Util\\String' => $vendorDir . '/psy/psysh/src/Psy/Util/String.php',
->>>>>>> ag2294-master
+
     'ReplyTableSeeder' => $baseDir . '/database/seeds/ReplyTableSeeder.php',
     'SebastianBergmann\\Comparator\\ArrayComparator' => $vendorDir . '/sebastian/comparator/src/ArrayComparator.php',
     'SebastianBergmann\\Comparator\\Comparator' => $vendorDir . '/sebastian/comparator/src/Comparator.php',

@@ -34,7 +34,7 @@ trait AuthenticatesAndRegistersUsers {
 	 */
 	public function getRegister()
 	{
-	
+
 	}
 
 	/**
@@ -45,6 +45,7 @@ trait AuthenticatesAndRegistersUsers {
 	 */
 	public function postRegister(Request $request)
 	{
+
 $me=$request->all();
 		$validator = $this->registrar->validator($request->all());
 
@@ -163,7 +164,7 @@ $confirmation_code = str_random(30);
 	 */
 	public function loginPath()
 	{
-		return property_exists($this, 'loginPath') ? $this->loginPath : '/home';
+		return property_exists($this, 'loginPath') ? $this->loginPath : '/SignIn';
 	}
 
 }

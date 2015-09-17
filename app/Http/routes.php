@@ -71,7 +71,10 @@ Route::controllers([
  //get login page
 
  Route::get('/SignIn',function(){
-
+if(Auth::check())
+{
+return Redirect::to('/dashboard');
+}
    return view('signin');
  });
 
