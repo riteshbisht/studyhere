@@ -34,7 +34,10 @@ trait AuthenticatesAndRegistersUsers {
 	 */
 	public function getRegister()
 	{
+		// return view('doverification')->with(["message"=>' You have already registerd.please verify the email address ('.Input::get("email").') through verification code we sent to you on the registerd email-address.
+		// plz also check you spam folder','button_message'=>'Verify','button_url'=>'http://www'.Input::get("email").'/']);
 
+		return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
 	}
 
 	/**
@@ -47,7 +50,14 @@ trait AuthenticatesAndRegistersUsers {
 	{
 
 $me=$request->all();
-		$validator = $this->registrar->validator($request->all());
+$rules = array(
+				'name'                  => 'required|min:3|max:80|alpha_dash',
+				'email'                 => 'required|between:3,64|email|unique:users',
+				'password'              => 'required|alpha_num|between:5|confirmed',
+				'password_confirmation' => 'required|alpha_num|between:5'
+		);
+
+		$validator = $this->registrar->validator($request->all(),$rules);
 
 $confirmation_code = str_random(30);
 		if ($validator->fails())
@@ -59,10 +69,25 @@ $confirmation_code = str_random(30);
 		}
 	//	$this->auth->login($this->registrar->create($me));
 		$user=User::find(Input::get('email'));
-		if($user)
+		$confirm=Confirm::find(Input::get('email'));
+
+		// if($user)
+		// {
+		// //	$this->loginPath();
+		// //	$this->auth->login($this->registrar->create($me));
+		// return view('doverification')->with(["message"=>'you are already registerd user  Login!<br>
+		// plz also check you sapn folder','button_message'=>'Login','button_url'=>'/SignIn']);
+		//
+		// }
+	 if($confirm)
 		{
-			$this->auth->login($this->registrar->create($me));
+			return view('doverification')->with(["message"=>' You have already registerd.please verify the email address ('.Input::get("email").') through verification code we sent to you on the registerd email-address.
+			plz also check you spam folder','button_message'=>'Verify','button_url'=>'http://www'.Input::get("email").'/']);
+
 		}
+		else {
+
+
 		$confirm = new Confirm;
 		$confirm->name=Input::get('name');
 		$confirm->email=Input::get('email');
@@ -75,13 +100,13 @@ $confirmation_code = str_random(30);
 	                ->subject('Verify your email address');
 	        }))
 					{
-		return view('doverification')->with(["message"=>'please verify the email address ('.Input::get("email").') through verification code we sent to you on the registerd email-address!!!<br>
-		 plz also check you sapn folder','button_message'=>'Verify','button_url'=>'http://www'.Input::get("email").'/']);
+		return view('doverification')->with(["message"=>'please verify the email address ('.Input::get("email").') through verification code we sent to you on the registerd email-address!
+		 plz also check you spam folder','button_message'=>'Verify','button_url'=>'http://www'.Input::get("email").'/']);
 }
 		return "error";
 	}
 
-
+}
 	/**
 	 * Show the application login form.
 	 *

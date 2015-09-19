@@ -163,8 +163,8 @@
 
 
                 <div style="margin-bottom: 25px" class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                  <input id="login-password" type="password" class="form-control" data-minlength="3" name="password" placeholder="password" minlength="6" required>
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input id="login-password" type="text" class="form-control" data-minlength="3" name="name" placeholder="username" minlength="6" required>
                 </div>
                 <div style="margin-bottom: 25px" class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
@@ -173,7 +173,7 @@
 
                 <div style="margin-bottom: 25px" class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                  <input id="login-password" type="password" class="form-control" data-minlength="6" name="password" placeholder="password" minlength="6" required>
+                  <input id="login-password" type="password" class="form-control" data-minlength="6" name="password_confirmation" placeholder="password" minlength="6" required>
                 </div>
 
 
