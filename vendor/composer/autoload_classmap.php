@@ -72,6 +72,7 @@ return array(
     'CreateContentsTable' => $baseDir . '/database/migrations/2015_07_26_101513_create_contents_table.php',
     'CreateCoursesTable' => $baseDir . '/database/migrations/2015_07_25_071826_create_courses_table.php',
     'CreateForumsTable' => $baseDir . '/database/migrations/2015_08_07_071842_create_forums_table.php',
+    'CreateFriendsTable' => $baseDir . '/database/migrations/2015_09_16_075011_create_friends_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateProfilesTable' => $baseDir . '/database/migrations/2015_07_24_093249_create_profiles_table.php',
     'CreateRepliesTable' => $baseDir . '/database/migrations/2015_08_09_091905_create_replies_table.php',
@@ -4180,6 +4181,7 @@ return array(
     'PHP_Token_XOR_EQUAL' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD_FROM' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
+
     'PhpSpec\\CodeGenerator\\GeneratorManager' => $vendorDir . '/phpspec/phpspec/src/PhpSpec/CodeGenerator/GeneratorManager.php',
     'PhpSpec\\CodeGenerator\\Generator\\ClassGenerator' => $vendorDir . '/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/ClassGenerator.php',
     'PhpSpec\\CodeGenerator\\Generator\\CreateObjectTemplate' => $vendorDir . '/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/CreateObjectTemplate.php',
@@ -4803,6 +4805,7 @@ return array(
     'Psy\\Util\\Json' => $vendorDir . '/psy/psysh/src/Psy/Util/Json.php',
     'Psy\\Util\\Mirror' => $vendorDir . '/psy/psysh/src/Psy/Util/Mirror.php',
     'Psy\\Util\\String' => $vendorDir . '/psy/psysh/src/Psy/Util/String.php',
+
     'ReplyTableSeeder' => $baseDir . '/database/seeds/ReplyTableSeeder.php',
     'SebastianBergmann\\Comparator\\ArrayComparator' => $vendorDir . '/sebastian/comparator/src/ArrayComparator.php',
     'SebastianBergmann\\Comparator\\Comparator' => $vendorDir . '/sebastian/comparator/src/Comparator.php',

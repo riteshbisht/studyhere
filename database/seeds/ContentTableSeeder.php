@@ -13,15 +13,27 @@ public function run()
 
         'subtopic_code'=>'ETMA-101-1-1',
         'content' => '',
-        'source'=>'/maths/1st/topic-1/leibinitz',
+        'source'=>'notes/maths/Leibnitz/source1/',
         'urlofcloud'=>'',
+        'noofimages'=>3,
     ]);
+
     DB::table('contents')->insert([
 
-        'subtopic_code'=>'ETMA-101-2-1',
+        'subtopic_code'=>'ETMA-101-1-1',
         'content'=> '',
-        'source'=>'',
+        'source'=>'notes/math/Leibnitz/source2/',
         'urlofcloud'=>'',
+        'noofimages'=>3
+    ]);
+
+    DB::table('contents')->insert([
+
+        'subtopic_code'=>'ETMA-101-1-1',
+        'content'=> '',
+        'source'=>'notes/math/Leibnitz/source3/',
+        'urlofcloud'=>'',
+        'noofimages'=>3
     ]);
 }
 

@@ -17,7 +17,7 @@ DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 
 		$this->call('UserTableSeeder');
 			$this->call('UniversityTableSeeder');
-				//$this->call('CoursesTableSeeder');
+				$this->call('CoursesTableSeeder');
 				$this->call('SubjectTableSeeder');
 			$this->call('TopicTableSeeder');
 				$this->call('SubTopicTableSeeder');

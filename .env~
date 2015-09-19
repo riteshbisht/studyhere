@@ -11,9 +11,11 @@ DB_HOST=localhost
 DB_PORT=3306
 DB_DATABASE=homestead
 DB_USERNAME=root
+<<<<<<< HEAD
 DB_PASSWORD=mysql
-
-
+=======
+DB_PASSWORD=ag123
+>>>>>>> 704bbb496f69daa0f32b5f1598815f7bbbf5caf1
 
 CACHE_DRIVER=file
 SESSION_DRIVER=file

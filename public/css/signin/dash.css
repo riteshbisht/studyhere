@@ -3,18 +3,17 @@
 margin-bottom:40px;
 margin-top:40px;
 
-height:70px;
-
-width:250px;
-background-color:brown;
+height:100px;
+color:black;;
+width:300px;
+background-color:orange;
 vertical-align:middle;
+b0x-shadow:30px 30px 10px orange;
+font-size:20px;
 
-font-size:16px;
-
-border-radius:20px;
 }
 #button1:hover{
-background-color:#5cbf2a;
+
 
 }
 #button1:active{

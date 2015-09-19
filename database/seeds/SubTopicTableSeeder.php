@@ -22,7 +22,7 @@ public function run()
     DB::table('sub_topics')->insert([
         'name'=>'Convergence and divergence of infinite series',
         'topic_code'=>'ETMA-101-2',
-        'subtopic_code'=>'ETMA-101-2-1',	
+        'subtopic_code'=>'ETMA-101-2-1',
 'tags'=>'convergence and divergence',
 
     ]);
@@ -366,7 +366,7 @@ public function run()
         'name'=>'Bessel’s and Legendre’s functions and their properties',
         'topic_code'=>'ETMA-101-8',
         'subtopic_code'=>'ETMA-101-8-9',
-'tags'=>'bessel's properties',
+'tags'=>'bessels properties',
 
     ]);
 
@@ -375,7 +375,7 @@ public function run()
         'name'=>'Bessel’s and Legendre’s functions and their properties',
         'topic_code'=>'ETMA-101-8',
         'subtopic_code'=>'ETMA-101-8-10',
-'tags'=>'legendre's properties',
+'tags'=>'legendre s properties',
 
     ]);
 
@@ -407,7 +407,7 @@ public function run()
         'name'=>'Newton’s rings',
         'topic_code'=>'ETPH-103-1',
         'subtopic_code'=>'ETPH-103-1-4',
-'tags'=>'newton's rings',
+'tags'=>'newtons rings',
     ]);
 
 
@@ -633,13 +633,13 @@ public function run()
         'name'=>'Mass energy relation',
         'topic_code'=>'ETPH-103-6',
         'subtopic_code'=>'ETPH-103-6-9',
-'tags'=>'Mass energy ',   
+'tags'=>'Mass energy ',
  ]);
     DB::table('sub_topics')->insert([
         'name'=>'Introduction',
         'topic_code'=>'ETPH-103-7',
         'subtopic_code'=>'ETPH-103-7-1',
-'tags'=>'intro',   
+'tags'=>'intro',
  ]);
 
 
@@ -647,77 +647,77 @@ public function run()
         'name'=>'ProductioPHof ultrasonics by magnetostriction and Piezoelectric methods',
         'topic_code'=>'ETPH-103-7',
         'subtopic_code'=>'ETPH-103-7-2',
-'tags'=>'ultrasonics by magnetostriction and Piezoelectric',    
+'tags'=>'ultrasonics by magnetostriction and Piezoelectric',
 ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Applications',
         'topic_code'=>'ETPH-103-7',
         'subtopic_code'=>'ETPH-103-7-3',
-'tags'=>'app',   
+'tags'=>'app',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Introduction',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-1',
-'tags'=>'intro', 
+'tags'=>'intro',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Radioactivity',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-2',
-'tags'=>'Radioactivity',   
+'tags'=>'Radioactivity',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Alpha decay',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-3',
-'tags'=>'Alpha decay',   
+'tags'=>'Alpha decay',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Beta decay',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-4',
-'tags'=>'Beta decay',  
+'tags'=>'Beta decay',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Gamma decay',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-5',
-'tags'=>'Gamma decay',   
+'tags'=>'Gamma decay',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Q value',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-6',
-'tags'=>'Q value',   
+'tags'=>'Q value',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Threshold energy',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-7',
-'tags'=>'Threshold energy', 
+'tags'=>'Threshold energy',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Nuclear reactions',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-8',
-'tags'=>'Nuclear reactions', 
+'tags'=>'Nuclear reactions',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Nuclear fisPHon: Liquid drop model',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-9',
-'tags'=>'Liquid drop model',  
+'tags'=>'Liquid drop model',
   ]);
 
 
@@ -725,7 +725,7 @@ public function run()
         'name'=>'Nuclear fusion',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-10',
-'tags'=>'Nuclear fusion', 
+'tags'=>'Nuclear fusion',
    ]);
 
 
@@ -733,7 +733,7 @@ public function run()
         'name'=>'Particle accelerators: Linear accelerator',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-11',
-'tags'=>'Linear accelerator',   
+'tags'=>'Linear accelerator',
  ]);
 
 
@@ -741,7 +741,7 @@ public function run()
         'name'=>'Cyclotron',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-12',
-'tags'=>'Cyclotron', 
+'tags'=>'Cyclotron',
    ]);
 
 
@@ -749,21 +749,21 @@ public function run()
         'name'=>'Radiation detectors: Ionization chamber',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-13',
-'tags'=>'Ionization chamber',  
+'tags'=>'Ionization chamber',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Geiger Mueller Counter',
         'topic_code'=>'ETPH-103-8',
         'subtopic_code'=>'ETPH-103-8-14',
-'tags'=>'Geiger Mueller',  
+'tags'=>'Geiger Mueller',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Introduction of Manufacturing processes and their classification',
         'topic_code'=>'ETME-105-1',
         'subtopic_code'=>'ETME-105-1-1',
-'tags'=>'Manufacturing processes', 
+'tags'=>'Manufacturing processes',
    ]);
 
     DB::table('sub_topics')->insert([
@@ -777,14 +777,14 @@ public function run()
         'name'=>'Properties of Materials: Strength ,elasticity, stiffness, malleability, ductility, brittleness, toughness and hardness',
         'topic_code'=>'ETME-105-1',
         'subtopic_code'=>'ETME-105-1-3',
-'tags'=>'Strength ,elasticity, stiffness, malleability',  
+'tags'=>'Strength ,elasticity, stiffness, malleability',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Ferrous Materials: Carbon steels, its classification based on % carbon as low, mild, medium & high carbon steel, its properties & applications',
         'topic_code'=>'ETME-105-1',
         'subtopic_code'=>'ETME-105-1-4',
-'tags'=>'Ferrous Materials',    
+'tags'=>'Ferrous Materials',
 ]);
 
     DB::table('sub_topics')->insert([
@@ -798,14 +798,14 @@ public function run()
         'name'=>'Alloy steels: stainless steel, tool steel',
         'topic_code'=>'ETME-105-1',
         'subtopic_code'=>'ETME-105-1-6',
-'tags'=>'Alloy steels',   
+'tags'=>'Alloy steels',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Elementary introduction to Heat',
         'topic_code'=>'ETME-105-1',
         'subtopic_code'=>'ETME-105-1-17',
-'tags'=>'Heat', 
+'tags'=>'Heat',
    ]);
 
     DB::table('sub_topics')->insert([
@@ -819,7 +819,7 @@ public function run()
         'name'=>'Non-Ferrous metals & alloys: Properties and uses of various non-ferrous metals & alloys and its composition such as Cu-alloys: Brass, Bronze, Al-alloys such as Duralumin',
         'topic_code'=>'ETME-105-1',
         'subtopic_code'=>'ETME-105-1-9',
-'tags'=>'Non-ferrous', 
+'tags'=>'Non-ferrous',
    ]);
 
 
@@ -827,28 +827,28 @@ public function run()
         'name'=>'Principles of metal casting',
         'topic_code'=>'ETME-105-2',
         'subtopic_code'=>'ETME-105-2-1',
-'tags'=>'metal casting',  
+'tags'=>'metal casting',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Pattern materials',
         'topic_code'=>'ETME-105-2',
         'subtopic_code'=>'ETME-105-2-2',
-'tags'=>'pattern materials', 
+'tags'=>'pattern materials',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'types and allowance',
         'topic_code'=>'ETME-105-2',
         'subtopic_code'=>'ETME-105-2-3',
-'tags'=>'types and allowance',  
+'tags'=>'types and allowance',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'composition and properties of moulding sand',
         'topic_code'=>'ETME-105-2',
         'subtopic_code'=>'ETME-105-2-4',
-'tags'=>'moulding sand', 
+'tags'=>'moulding sand',
    ]);
 
     DB::table('sub_topics')->insert([
@@ -862,14 +862,14 @@ public function run()
         'name'=>'concept of cores and core print',
         'topic_code'=>'ETME-105-2',
         'subtopic_code'=>'ETME-105-2-6',
-'tags'=>'cores', 
+'tags'=>'cores',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'elements of gating system',
         'topic_code'=>'ETME-105-2',
         'subtopic_code'=>'ETME-105-2-7',
-'tags'=>'gating system', 
+'tags'=>'gating system',
    ]);
 
 
@@ -877,7 +877,7 @@ public function run()
         'name'=>'description and operation of cupola',
         'topic_code'=>'ETME-105-2',
         'subtopic_code'=>'ETME-105-2-8',
-'tags'=>'cupola', 
+'tags'=>'cupola',
    ]);
 
 
@@ -885,35 +885,35 @@ public function run()
         'name'=>'special casting processes e.g. die-casting; permanent mould casting; centrifugal casting; investment casting',
         'topic_code'=>'ETME-105-2',
         'subtopic_code'=>'ETME-105-2-9',
-'tags'=>'die-casting',  
+'tags'=>'die-casting',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'casting defects',
         'topic_code'=>'ETME-105-2',
         'subtopic_code'=>'ETME-105-2-10',
-'tags'=>'casting effects',   
+'tags'=>'casting effects',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Hot working and cold working',
         'topic_code'=>'ETME-105-3',
         'subtopic_code'=>'ETME-105-3-1',
-'tags'=>'hot and cold working',  
+'tags'=>'hot and cold working',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Forging tools and equipments',
         'topic_code'=>'ETME-105-3',
         'subtopic_code'=>'ETME-105-3-2',
-'tags'=>'forging tools',  
+'tags'=>'forging tools',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Forging operations',
         'topic_code'=>'ETME-105-3',
         'subtopic_code'=>'ETME-105-3-4',
-'tags'=>'forging operations', 
+'tags'=>'forging operations',
    ]);
 
 
@@ -921,7 +921,7 @@ public function run()
         'name'=>'Forging types: Smith forging, Drop forging, Press forging, Machine forging',
         'topic_code'=>'ETME-105-3',
         'subtopic_code'=>'ETME-105-3-5',
-'tags'=>'forging types',  
+'tags'=>'forging types',
   ]);
 
 
@@ -929,7 +929,7 @@ public function run()
         'name'=>'Forging defects; Extrusion, wire drawing, swaging',
         'topic_code'=>'ETME-105-3',
         'subtopic_code'=>'ETME-105-3-6',
-'tags'=>'forging defects', 
+'tags'=>'forging defects',
    ]);
 
 
@@ -945,7 +945,7 @@ public function run()
         'name'=>'operation: Fitting , sawing, chipping',
         'topic_code'=>'ETME-105-4',
         'subtopic_code'=>'ETME-105-4-2',
-'tags'=>'operations', 
+'tags'=>'operations',
    ]);
 
 
@@ -953,7 +953,7 @@ public function run()
         'name'=>'thread cutting (with taps and dies)',
         'topic_code'=>'ETME-105-4',
         'subtopic_code'=>'ETME-105-4-3',
-'tags'=>'thread cutting',  
+'tags'=>'thread cutting',
   ]);
 
 
@@ -961,7 +961,7 @@ public function run()
         'name'=>'Marking and marking tools',
         'topic_code'=>'ETME-105-4',
         'subtopic_code'=>'ETME-105-4-4',
-'tags'=>'marking tools',  
+'tags'=>'marking tools',
   ]);
 
 
@@ -969,7 +969,7 @@ public function run()
         'name'=>'Welding principles',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-1',
-'tags'=>'welding', 
+'tags'=>'welding',
    ]);
 
 
@@ -977,7 +977,7 @@ public function run()
         'name'=>'classification of welding techniques',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-2',
-'tags'=>'welding techniques',  
+'tags'=>'welding techniques',
   ]);
 
     DB::table('sub_topics')->insert([
@@ -998,14 +998,14 @@ public function run()
         'name'=>'Arc-welding',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-5',
-'tags'=>'arc-welding',  
+'tags'=>'arc-welding',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'metal arc',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-6',
-'tags'=>'metal arc',  
+'tags'=>'metal arc',
   ]);
 
 
@@ -1020,21 +1020,21 @@ public function run()
         'name'=>'submerged arc welding',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-8',
-'tags'=>'submerged arc',   
+'tags'=>'submerged arc',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'atomic hydrogen welding',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-9',
-'tags'=>'atomic hydrogen',   
+'tags'=>'atomic hydrogen',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'TIG and MIG welding',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-10',
- 
+
 'tags'=>'tig mig',
    ]);
 
@@ -1042,42 +1042,42 @@ public function run()
         'name'=>'Electric resistance welding: spot; seam; flash; butt and percussion welding',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-11',
-'tags'=>'seam flash spot',  
+'tags'=>'seam flash spot',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Flux: composition; properties and function',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-12',
-'tags'=>'flux', 
+'tags'=>'flux',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Electrodes',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-13',
-'tags'=>'electrodes',  
+'tags'=>'electrodes',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Types of joints and edge preparation',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-14',
-'tags'=>'joints and edges',  
+'tags'=>'joints and edges',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Brazing and soldering',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-15',
-'tags'=>'brazing and soldering', 
+'tags'=>'brazing and soldering',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'welding defects',
         'topic_code'=>'ETME-105-5',
         'subtopic_code'=>'ETME-105-5-16',
-'tags'=>'welding defects',   
+'tags'=>'welding defects',
  ]);
 
 
@@ -1085,7 +1085,7 @@ public function run()
         'name'=>'Tools and equipments used in sheet metal work',
         'topic_code'=>'ETME-105-6',
         'subtopic_code'=>'ETME-105-6-1',
-'tags'=>'tools',  
+'tags'=>'tools',
   ]);
 
 
@@ -1093,27 +1093,27 @@ public function run()
         'name'=>'metals used for sheets',
         'topic_code'=>'ETME-105-6',
         'subtopic_code'=>'ETME-105-6-2',
-'tags'=>'sheets metal',  
+'tags'=>'sheets metal',
   ]);
     DB::table('sub_topics')->insert([
         'name'=>'standard specification for sheets',
         'topic_code'=>'ETME-105-6',
         'subtopic_code'=>'ETME-105-6-3',
-'tags'=>'leibnitz theorem',  
+'tags'=>'leibnitz theorem',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Types of sheet metal operations: shearing, drawing, bending',
         'topic_code'=>'ETME-105-6',
         'subtopic_code'=>'ETME-105-6-4',
-'tags'=>'shearing drawing',   
+'tags'=>'shearing drawing',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Other operations like spinning, stretch forming,embossing and coining ',
         'topic_code'=>'ETME-105-6',
         'subtopic_code'=>'ETME-105-6-5',
-'tags'=>'spining stretch',  
+'tags'=>'spining stretch',
   ]);
 
 
@@ -1121,7 +1121,7 @@ public function run()
         'name'=>'Introduction of powder metallurgy process: powder production, blending, compaction,sintering',
         'topic_code'=>'ETME-105-7',
         'subtopic_code'=>'ETME-105-7-1',
-'tags'=>'metallurgy',   
+'tags'=>'metallurgy',
  ]);
 
 
@@ -1129,7 +1129,7 @@ public function run()
         'name'=>'Introduction of Circuit parameters and energy sources (Dependent and Independent)',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-1',
-'tags'=>'leibnitz theorem',   
+'tags'=>'leibnitz theorem',
  ]);
 
 
@@ -1137,62 +1137,62 @@ public function run()
         'name'=>'Mesh and Nodal Analysis',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-2',
-'tags'=>'mesh and nodal',  
+'tags'=>'mesh and nodal',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Superposition',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-3',
-'tags'=>'superposition',   
+'tags'=>'superposition',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Thevenin’s',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-4',
-'tags'=>'Thevenin’s',   
+'tags'=>'Thevenins',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Norton’s',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-5',
-'tags'=>'norton's', 
+'tags'=>'nortons',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Reciprocity',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-6',
-'tags'=>'reciprocity',  
+'tags'=>'reciprocity',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Maximum Power Transfer',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-7',
-'tags'=>'max power ',  
+'tags'=>'max power ',
   ]);
     DB::table('sub_topics')->insert([
         'name'=>'Millman’s Theorems',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-8',
-'tags'=>'millmans',  
+'tags'=>'millmans',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Star- Delta Transformation and their Applications to the Analysis of DC circuits',
         'topic_code'=>'ETEE-107-1',
         'subtopic_code'=>'ETEE-107-1-9',
-'tags'=>'star delta',  
+'tags'=>'star delta',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'A.C. Fundamentals',
         'topic_code'=>'ETEE-107-2',
         'subtopic_code'=>'ETEE-107-2-1',
-'tags'=>'ac funda',   
+'tags'=>'ac funda',
  ]);
 
     DB::table('sub_topics')->insert([
@@ -1206,7 +1206,7 @@ public function run()
         'name'=>'Steady State Response of Series and Parallel R-L, R-C and R-L-C circuits using j-notation',
         'topic_code'=>'ETEE-107-2',
         'subtopic_code'=>'ETEE-107-2-4',
-'tags'=>'steady state j notation',   
+'tags'=>'steady state j notation',
  ]);
 
     DB::table('sub_topics')->insert([
@@ -1220,7 +1220,7 @@ public function run()
         'name'=>'Introduction to balanced 3-phase circuits with Star- Delta Connections',
         'topic_code'=>'ETEE-107-2',
         'subtopic_code'=>'ETEE-107-2-6',
-'tags'=>'3 phase ckts', 
+'tags'=>'3 phase ckts',
    ]);
 
 
@@ -1228,14 +1228,14 @@ public function run()
         'name'=>'Basics of measuring instruments and their types',
         'topic_code'=>'ETEE-107-3',
         'subtopic_code'=>'ETEE-107-3-1',
-'tags'=>'measuring units',  
+'tags'=>'measuring units',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Working principles and applications of moving coil, moving iron (ammeter & voltmeter) and Extension of their ranges',
         'topic_code'=>'ETEE-107-3',
         'subtopic_code'=>'ETEE-107-3-2',
-'tags'=>'moving coil moving iron',  
+'tags'=>'moving coil moving iron',
   ]);
 
     DB::table('sub_topics')->insert([
@@ -1249,21 +1249,21 @@ public function run()
         'name'=>'induction-type Energy Meter ',
         'topic_code'=>'ETEE-107-3',
         'subtopic_code'=>'ETEE-107-3-4',
-'tags'=>'induction', 
+'tags'=>'induction',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Two-wattmeter method for the measurement of power in three phase circuits',
         'topic_code'=>'ETEE-107-3',
         'subtopic_code'=>'ETEE-107-3-5',
-'tags'=>'2 wattmeter',   
+'tags'=>'2 wattmeter',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Introduction to digital voltmeter, digital Multimeter and Electronic Energy Meter',
         'topic_code'=>'ETEE-107-3',
         'subtopic_code'=>'ETEE-107-3-6',
-'tags'=>'digital voltmeter', 
+'tags'=>'digital voltmeter',
    ]);
 
 
@@ -1271,42 +1271,42 @@ public function run()
         'name'=>'Fundamentals of Magnetic Circuits',
         'topic_code'=>'ETEE-107-4',
         'subtopic_code'=>'ETEE-107-4-1',
-'tags'=>'magnetic ckts', 
+'tags'=>'magnetic ckts',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Hysteresis and Eddy current losses',
         'topic_code'=>'ETEE-107-4',
         'subtopic_code'=>'ETEE-107-4-2',
-'tags'=>'eddy current', 
+'tags'=>'eddy current',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'working principle, equivalent circuit, efficiency and voltage regulation of single phase transformer and its applications',
         'topic_code'=>'ETEE-107-4',
         'subtopic_code'=>'ETEE-107-4-3',
-'tags'=>'efficiency',  
+'tags'=>'efficiency',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Introduction to DC and Induction motors (both three phase and single phase)',
         'topic_code'=>'ETEE-107-4',
         'subtopic_code'=>'ETEE-107-4-4',
-'tags'=>'dc and induction motors',  
+'tags'=>'dc and induction motors',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Stepper Motor',
         'topic_code'=>'ETEE-107-4',
         'subtopic_code'=>'ETEE-107-4-5',
-'tags'=>'stepper motor',  
+'tags'=>'stepper motor',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Permanent Magnet Brushless DC Motor',
         'topic_code'=>'ETEE-107-4',
         'subtopic_code'=>'ETEE-107-4-6',
-'tags'=>'magnet brushless',  
+'tags'=>'magnet brushless',
   ]);
 
 
@@ -1322,14 +1322,14 @@ public function run()
         'name'=>'Basic Human Aspirations: Prosperity and happiness',
         'topic_code'=>'ETHS-109-1',
         'subtopic_code'=>'ETHS-109-1-2',
-'tags'=>'human aspirations', 
+'tags'=>'human aspirations',
    ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Methods to fulfil the human aspirations – understanding and living in harmony at various levels',
         'topic_code'=>'ETHS-109-1',
         'subtopic_code'=>'ETHS-109-1-3',
-'tags'=>'methods to fulfil',   
+'tags'=>'methods to fulfil',
  ]);
 
     DB::table('sub_topics')->insert([
@@ -1896,29 +1896,29 @@ public function run()
         'name'=>'Galvanic Corrosion',
         'topic_code'=>'ETCH-113-4',
         'subtopic_code'=>'ETCH-113-4-6',
-'tags'=>'Corrosion',   
+'tags'=>'Corrosion',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Soil Corrosion Pitting Corrosion',
         'topic_code'=>'ETCH-113-4',
         'subtopic_code'=>'ETCH-113-4-7',
-'tags'=>'Corrosion',   
+'tags'=>'Corrosion',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Concentration Cell or Differential Aeration Corrosion',
         'topic_code'=>'ETCH-113-4',
         'subtopic_code'=>'ETCH-113-4-8',
-  
-'tags'=>'Corrosion', 
+
+'tags'=>'Corrosion',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Stress Corrosion',
         'topic_code'=>'ETCH-113-4',
         'subtopic_code'=>'ETCH-113-4-9',
-'tags'=>'Stress Corrosion',   
+'tags'=>'Stress Corrosion',
  ]);
 
 
@@ -1926,52 +1926,53 @@ public function run()
         'name'=>'Factors Influencing Corrosion: Nature of metal and nature of corroding environment;',
         'topic_code'=>'ETCH-113-4',
         'subtopic_code'=>'ETCH-113-4-10',
-'tags'=>'corrosion',  
+'tags'=>'corrosion',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Protective measures: Galvanization',
         'topic_code'=>'ETCH-113-4',
         'subtopic_code'=>'ETCH-113-4-11',
-'tags'=>'galvanisation',   
+'tags'=>'galvanisation',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Protective measures:Tinning Cathodic Protection',
         'topic_code'=>'ETCH-113-4',
         'subtopic_code'=>'ETCH-113-4-12',
-'tags'=>'Tinning Cathodic Protection',   
+'tags'=>'Tinning Cathodic Protection',
  ]);
 
     DB::table('sub_topics')->insert([
         'name'=>'Protective measures:Sacrificial Anodic protection',
         'topic_code'=>'ETCH-113-4',
         'subtopic_code'=>'ETCH-113-4-13',
-'tags'=>'Sacrificial Anodic protection',  
+'tags'=>'Sacrificial Anodic protection',
   ]);
 
     DB::table('sub_topics')->insert([
         'name'=>' Protective measures:Electroplating',
         'topic_code'=>'ETCH-113-4',
         'subtopic_code'=>'ETCH-113-4-14',
-'tags'=>'Electroplating',   
+'tags'=>'Electroplating',
  ]);
 
       DB::table('sub_topics')->insert([
           'name'=>'Protective measures:Electroless plating',
           'topic_code'=>'ETCH-113-4',
           'subtopic_code'=>'ETCH-113-4-15',
-'tags'=>'Electroless plating',   
+'tags'=>'Electroless plating',
    ]);
 
       DB::table('sub_topics')->insert([
           'name'=>'Prevention of Corrosion by Material selection & Design',
           'topic_code'=>'ETCH-113-4',
           'subtopic_code'=>'ETCH-113-4-16',
-'tags'=>'Prevention of Corrosion',   
+'tags'=>'Prevention of Corrosion',
    ]);
 
 
 }
 
 }
+//kaha se uthaaya h? ye database?

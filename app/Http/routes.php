@@ -71,11 +71,14 @@ Route::controllers([
  //get login page
 
  Route::get('/SignIn',function(){
-
+if(Auth::check())
+{
+return Redirect::to('/dashboard');
+}
    return view('signin');
  });
 
- 
+
  //route to reset password
  Route::get('/reset',function(){
 
@@ -147,3 +150,6 @@ Route::get('/notes',function(){
 });
 //rouet to register verify
 Route::get('register/verify/{confirmationCode}','RegistrationController@confirm');
+
+
+Route::get('search/{tag}','SearchController@search');

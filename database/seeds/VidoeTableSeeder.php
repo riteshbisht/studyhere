@@ -9,20 +9,27 @@ class VideoTableSeeder extends Seeder
 
 public function run()
 {
-
+//get the subtopic and youtube videoids as array of key valur pair from config/subtopic.php
+//eg array('ETMA-101-1-1'=>array('fdfd','dffdf','sdsd'))
       $arrofsubtopicsandvideoid=Config::get('subtopic');
+
       $arrofsubtopics=[];
+
       $i=0;
             while ( $i<sizeof($arrofsubtopicsandvideoid)) {
+              //get the array of subtopics
               $arrofsubtopics=array_add($arrofsubtopics,$i,key($arrofsubtopicsandvideoid));
               $i=$i+1;
+
           next($arrofsubtopicsandvideoid);
       }
+      //for each subtopic  fetch all the videos from youtube
   for($i=0;$i<sizeof($arrofsubtopics);$i++)
   {
     $subtopic_code=$arrofsubtopics[$i];
     $videoids=$arrofsubtopicsandvideoid[$subtopic_code];
 
+//fetch all the videos title and description of a single subtopic and store in datbase
     for($j=0;$j<sizeof($videoids);$j++)
           {
             $client = new HttpClient;
