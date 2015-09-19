@@ -1,4 +1,4 @@
-﻿// app/database/seeds/SubTopicTableSeeder.php
+﻿ // app/database/seeds/SubTopicTableSeeder.php
 
 <?php
 use Illuminate\Support\Facades\DB;
