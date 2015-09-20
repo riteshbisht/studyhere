@@ -24,7 +24,7 @@
 <body style="background-image:url('images/1.jpg')">
 
   <nav class="grey darken-4" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"> Home</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo"> Home</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">About Us</a></li>
       </ul>
@@ -94,7 +94,7 @@
             <h2 class="center black-text"><i class="material-icons">view_module</i></h2>
             <h5 class="center">View notes online</h5>
 
-            <p class="light">some description</p>
+            
           </div>
         </div>
 
@@ -103,7 +103,7 @@
             <h2 class="center black-text"><i class="material-icons">group</i></h2>
             <h5 class="center">Connect with various students</h5>
 
-            <p class="light">some description</p>
+            
           </div>
         </div>
 
@@ -112,7 +112,7 @@
             <h2 class="center black-text"><i class="material-icons">settings</i></h2>
             <h5 class="center">Easy to work with</h5>
 
-            <p class="light">some description</p>
+            
           </div>
         </div>
 
@@ -121,7 +121,7 @@
             <h2 class="center black-text"><i class="material-icons">videocam</i></h2>
             <h5 class="center">Video Lectures</h5>
 
-            <p class="light">some Description </p>
+            
           </div>
         </div>
 

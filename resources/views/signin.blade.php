@@ -46,7 +46,6 @@
   <!--    <div class="row">
         <div>
           @if($errors->has()) @foreach ($errors->all() as $error)
-
           <div>{{ $error }}</div>
           @endforeach @endif
         </div>
@@ -153,6 +152,14 @@
                   <p>Error:</p>
                   <span></span>
                 </div>
+  
+
+
+
+                <div style="margin-bottom: 25px" class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open"></i></span>
+                  <input id="login-password" type="text" class="form-control" data-minlength="3" name="name" placeholder="username" minlength="6" required>
+                </div>
 
 
                 <div style="margin-bottom: 25px" class="input-group">
@@ -162,18 +169,15 @@
                 </div>
 
 
-                <div style="margin-bottom: 25px" class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                  <input id="login-password" type="text" class="form-control" data-minlength="3" name="name" placeholder="username" minlength="6" required>
-                </div>
+                
                 <div style="margin-bottom: 25px" class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                   <input id="login-password" type="password" class="form-control" name="password" data-minlength="6" placeholder="password" minlength="6" required>
                 </div>
 
                 <div style="margin-bottom: 25px" class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                  <input id="login-password" type="password" class="form-control" data-minlength="6" name="password_confirmation" placeholder="password" minlength="6" required>
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
+                  <input id="login-password" type="password" class="form-control" data-minlength="6" name="password_confirmation" placeholder="confirm password" minlength="6" required>
                 </div>
 
 

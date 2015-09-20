@@ -44,16 +44,9 @@
   </a>
 </div>
 
-<ul class="nav navbar-nav navbar-right" style="color:white;">
-  <li><a href="#">Dashboard</a></li>
-  <li><a href="#">Notification</a></li>
-      <li class=" navbarli"><a href="{{ url('/auth/logout') }}">Logout</a></li>
-</ul>
 
-  <ul id="nav-mobile" class="side-nav">
-    <li><a href="#">About Us</a></li>
-  </ul>
-  <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
 </div>
 
 
@@ -75,15 +68,15 @@
       <ul>
         <li class="profile-userpic">
 
-          <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="hi">
+          <img src="" class="img-responsive" alt="hi">
 
 
         </li>
 
       </ul>
 
-          <div class="profile-usertitle-name">
-            USERNAME
+          <div class="profile-usertitle-name" style="color:white;">
+        {{ Auth::user()->name }}
           </div>
       <div class="profile-usermenu">
           <ul class="nav">
@@ -93,14 +86,19 @@
               Dashboard</a>
             </li>
             <li>
-              <a href="settings.html">
+              <a href="#">
               <i class="glyphicon glyphicon-user"></i>
               Profile Settings </a>
             </li>
             <li>
-              <a href="report.html">
+              <a href="#">
               <i class="glyphicon glyphicon-warning-sign"></i>
               Report </a>
+            </li>
+            <li>
+              <a href="{{url('auth/logout')}}">
+              <i class="glyphicon glyphicon-plane"></i>
+              Logout </a>
             </li>
           </ul>
         </div>
