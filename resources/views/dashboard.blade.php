@@ -45,8 +45,8 @@
 </div>
 
 
-  
-  
+
+
 </div>
 
 
@@ -75,8 +75,8 @@
 
       </ul>
 
-          <div class="profile-usertitle-name">
-            USERNAME
+          <div class="profile-usertitle-name" style="color:white;">
+        {{ Auth::user()->name }}
           </div>
       <div class="profile-usermenu">
           <ul class="nav">
@@ -86,17 +86,17 @@
               Dashboard</a>
             </li>
             <li>
-              <a href="settings.html">
+              <a href="#">
               <i class="glyphicon glyphicon-user"></i>
               Profile Settings </a>
             </li>
             <li>
-              <a href="report.html">
+              <a href="#">
               <i class="glyphicon glyphicon-warning-sign"></i>
               Report </a>
             </li>
             <li>
-              <a href="report.html">
+              <a href="{{url('auth/logout')}}">
               <i class="glyphicon glyphicon-plane"></i>
               Logout </a>
             </li>
