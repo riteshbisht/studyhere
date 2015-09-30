@@ -44,7 +44,7 @@
         <img src="" class="avatar img-circle img-thumbnail" alt="your image" style="height:150px; width:150px; radius:40px">
         <br>
         <br>
-        <input type="file" class="text-center center-block well well-sm">
+        <input type="file" class="text-center center-block well well-sm" style="background:orange">
       </div>
     </div>
     <!-- edit form column -->
@@ -58,26 +58,13 @@
             <input class="form-control" value="" type="text" placeholder="Username">
           </div>
         </div>
-        
-        <div class="form-group">
+           <div class="form-group">
           <label class="col-lg-3 control-label" style="color:white;">Email:</label>
           <div class="col-lg-8">
             <input class="form-control" value="" type="text" placeholder="Email">
           </div>
         </div>
-        <div class="form-group">
-          <label class="col-lg-3 control-label" style="color:white;">Time Zone:</label>
-          <div class="col-lg-8">
-            <div class="ui-select">
-              <select id="user_time_zone" class="form-control">
-                <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                <option value="Alaska">(GMT-09:00) Alaska</option>
-                <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                <option value="India">(GMT +05:30) India </option>
-              </select>
-            </div>
-          </div>
-        </div>
+        
         
         <div class="form-group">
           <label class="col-md-3 control-label" style="color:white;">Password:</label>
@@ -91,12 +78,66 @@
             <input class="form-control" value="" type="password" placeholder="Confirm Password">
           </div>
         </div>
+
+        <div class="form-group">
+          <label class="col-lg-3 control-label" style="color:white;">University:</label>
+          <div class="col-lg-8">
+            <div class="ui-select">
+              <select id="university" class="form-control">
+                <option value="su">Select University...</option>
+                <option value="IIT">Indian Institute Of Technology</option>
+                <option value="DCE">DCE</option>
+                <option value="NSIT">NSIT</option>
+                <option value="NIT">NIT</option>
+                <option value="GGSIPU">GGSIPU</option>
+                <option value="MTU">MTU</option>
+                </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-3 control-label" style="color:white;">Branch:</label>
+          <div class="col-lg-4">
+            <div class="ui-select">
+              <select id="Branch" class="form-control">
+                <option value="su">Select Branch</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">I.T.</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="Mech">Mech</option>
+                <option value="Civil">Civil</option>
+                </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-3 control-label" style="color:white;">Year:</label>
+          <div class="col-lg-4">
+            <div class="ui-select">
+              <select id="Branch" class="form-control">
+                <option value="su">Select Year</option>
+                <option value="1st">1st</option>
+                <option value="2nd">2nd</option>
+                <option value="3rd">3rd</option>
+                <option value="4th">4th</option>
+                
+                </select>
+            </div>
+          </div>
+        </div>
+        
+     
         <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
-            <input class="btn btn-primary" value="Save Changes" type="button">
+
+          
+            <button type="submit" id="btn-login" style="background:orange" class="btn btn-success"> Save Changes </button>
             <span></span>
-            <input class="btn btn-default" value="Cancel" type="reset">
+            <button type="reset" id="btn-login" style="background:red" class="btn btn-success"> Cancel </button>
           </div>
         </div>
       </form>
