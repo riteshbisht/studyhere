@@ -86,7 +86,7 @@
               Dashboard</a>
             </li>
             <li>
-              <a href="#">
+              <a href="{{url('/profile_settings')}}">
               <i class="glyphicon glyphicon-user"></i>
               Profile Settings </a>
             </li>
