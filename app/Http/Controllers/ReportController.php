@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Redirect;
 
 use Illuminate\Http\Request;
 
-class ProfileSettingController extends Controller {
+class ReportController extends Controller {
 
 	// retunr the dashboard if already login else homespage
 	public function start()
 	{
 		if(Auth::check())
 		{
-		return \View::make('/profile_settings')->with('name','ritesh');
+		return \View::make('/report')->with('name','ritesh');
 	}
 	else {
 
