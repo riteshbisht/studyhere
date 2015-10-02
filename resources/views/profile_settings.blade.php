@@ -32,7 +32,7 @@
 
   <!-- Favicon and touch icons -->
   <link rel="shortcut icon" href="favicon.ico">
-  
+
 </head>
 <body style="background-image:url(images/1.jpg);">
 <div class="container" style="padding-top: 20px;">
@@ -49,7 +49,7 @@
     </div>
     <!-- edit form column -->
     <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
-      
+
       <h2 align = "center" style="color:white;">Personal Info</h2>
       <form class="form-horizontal" role="form">
         <div class="form-group">
@@ -64,8 +64,8 @@
             <input class="form-control" value="" type="text" placeholder="Email">
           </div>
         </div>
-        
-        
+
+
         <div class="form-group">
           <label class="col-md-3 control-label" style="color:white;">Password:</label>
           <div class="col-md-8">
@@ -123,18 +123,18 @@
                 <option value="2nd">2nd</option>
                 <option value="3rd">3rd</option>
                 <option value="4th">4th</option>
-                
+
                 </select>
             </div>
           </div>
         </div>
-        
-     
+
+
         <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
 
-          
+
             <button type="submit" id="btn-login" style="background:orange" class="btn btn-success"> Save Changes </button>
             <span></span>
             <button type="reset" id="btn-login" style="background:red" class="btn btn-success"> Cancel </button>
