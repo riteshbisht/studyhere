@@ -91,7 +91,7 @@
               Profile Settings </a>
             </li>
             <li>
-              <a href="#">
+              <a href="{{url('/report')}}">
               <i class="glyphicon glyphicon-warning-sign"></i>
               Report </a>
             </li>
