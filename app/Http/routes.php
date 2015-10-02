@@ -100,6 +100,12 @@ Route::get('/home', 'HomeController@start');
 //route to dashboard
 Route::get('/dashboard', 'DashboardController@start');
 
+//route to profile_setting
+Route::get('/profile_settings', 'ProfileSettingController@start');
+
+//route to report
+Route::get('/report', 'ReportController@start');
+
 
 //route to completeprofilepage
 Route::get('/completeprofile', function(){

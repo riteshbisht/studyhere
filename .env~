@@ -15,7 +15,9 @@ DB_USERNAME=root
 DB_PASSWORD=mysql
 =======
 DB_PASSWORD=ag123
->>>>>>> 704bbb496f69daa0f32b5f1598815f7bbbf5caf1
+>>>>>>> 1fbdb7a56fe21cd159195a73b9cd108cf14d9c33
+
+
 
 CACHE_DRIVER=file
 SESSION_DRIVER=file
