@@ -46,6 +46,11 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function () 
   //get all the topc of subject on the basis of unit no.
   Route::get('/topic/{code}/unit/{unit_no}', 'TopicController@showByUnit');
 
+  //get randomtopic of random subject on the basis of pupularity;
+  Route::get('randomtopic/','RandomTopicController@getRandomTopic');
+
+//get all the sources fo particular subtopic
+
   //get all the subtopic on the basis of topic id
   Route::get('/subtopic/{topic_id}', 'SubTopicController@showByTopicId');
 
@@ -65,6 +70,7 @@ Route::controllers([
 
   return view('auth/password');
  });
+ Route::get('sources/{subtopic_name}','SourceController@getAll');
 
 
 
@@ -145,7 +151,7 @@ Route::get('/home', 'HomeController@start');
 
 
 //route to notes
-Route::get('/notes',function(){
+Route::get('/note',function(){
   return view('notes');
 });
 //rouet to register verify

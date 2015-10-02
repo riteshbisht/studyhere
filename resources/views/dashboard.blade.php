@@ -120,7 +120,7 @@
     <div class="col-md-10" id="button-panel">
 
         <div class="row ">
-        <div class="col-md-4  col-sm-12 text-center"  >  <a href="{{url('/notes')}}"><button type="button" class="btn"  id="button1" ><span class="glyphicon glyphicon-book">&nbsp;NOTES</span></button></a></div>
+        <div class="col-md-4  col-sm-12 text-center"  >  <a href="{{url('/note')}}"><button type="button" class="btn"  id="button1" ><span class="glyphicon glyphicon-book">&nbsp;NOTES</span></button></a></div>
         <div class="col-md-4  col-sm-12 text-center"  >  <a href="{{url('/forum')}}" ><button type="button" class=" btn  " id="button1" ><span class="glyphicon glyphicon-comment">&nbsp;FORUM</span></button></a></div>
         <div class="col-md-4 col-sm-12 text-center"  >  <a href="analytics.html"> <button type="button" class=" btn   " id="button1" ><span class="glyphicon glyphicon-stats">&nbsp;GOOGLE
           <br>ANALYTICS</span></button></a></div>

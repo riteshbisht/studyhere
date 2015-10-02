@@ -14,7 +14,7 @@ class CreateSubTopicsTable extends Migration {
 	{
 		Schema::create('sub_topics', function(Blueprint $table)
 		{
-
+				$table->integer('views');
 			$table->string('name');
 			$table->string('subtopic_code');
 			$table->primary('subtopic_code');

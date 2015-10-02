@@ -14,6 +14,7 @@ class CreateTopicsTable extends Migration {
 	{
 		Schema::create('topics', function(Blueprint $table)
 		{
+			$table->integer('views');
 			$table->string('topic_code');
 			$table->primary('topic_code');
 			$table->string('name');
