@@ -1,113 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>title</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="" name="description"/
+  <meta content="" name="author"/>
+  <title>Tutelage</title>
 
   <!-- CSS  -->
-  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-  <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="/css/icons.css">
+  <link rel="stylesheet" href="css//signin/sb-admin-2.css">
+  <link rel="stylesheet" href="css/signin/dash.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/signin/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/signin/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/signin/login.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<style>
-.messagestyle
-{
-  font: normal small-caps normal 20px/1.4 Georgia;
-}
-.datetimestyle
-{
-  font: normal small-caps normal 11px/1.4 Georgia;
-}
-</style>
+  <script src="js/signin/materialize.js"></script>
+  <script src="js/signin/materialize.min.js"></script>
+  <script src="js/signin/dash_js.js"></script>
+<!-- END GLOBAL MANDATORY STYLES -->
+
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+
 </head>
+<body style="background-image:url(images/1.jpg);">
 
-<body >
-  <div class="bg-info" style="position:fixed;width:200px;z-index:9999;height:200px;bottom:30px;right:30px;">
-      <input type="textbox" />
-  </div>
-  <div style="position:fixed;width:20px;height:20px;bottom:2px;right:2px;background:black;">
+ <nav class="navbar-fixed  sidebar-menu-collapsed grey darken-4">
+<div class="nav-wrapper container-fluid"><a id="logo-container"  class="brand-logo center"> forums</a>
 
-  </div>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">tutelage</a>
+<div class="row">
+<div class="col-md-1 col-xs-2">
+ <a href='#menu-toggle' id='justify-icon'>
+    <span class='glyphicon glyphicon-align-justify btn' id="side-button"></span>
+  </a>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+    </div><!--row closed of the navbar-->
+
+  </div> <!--container-fluid closed-->
+</nav>
+
+
+<!-- side bar fixed-->
+
+<div class="container-fluid grey darken-4" id="side-bar">
+
+  <div class="row" style="height:700px;">
+      <ul>
+        <li class="profile-userpic">
+
+          <img src="" class="img-responsive" alt="hi">
+
+
+        </li>
+
+      </ul>
+
+          <div class="profile-usertitle-name" style="color:white;">
+        {{ Auth::user()->name }}
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Settings</a></li>
-
-              <li >
-                <a href="\home" id="#username">{{ Auth::user()->name }}</a></li>
-              </li>
-                  <li class=" navbarli"><a href="{{ url('/auth/logout') }}">Logout</a></li>
-            </ul>
-            <form class="navbar-form navbar-right">
-              <input type="text" class="form-control" placeholder="Search...">
-            </form>
-          </div>
+      <div class="profile-usermenu">
+          <ul class="nav">
+            <li>
+              <a href="{{url('/dashboard')}}">
+              <i class="glyphicon glyphicon-home"></i>
+              Dashboard</a>
+            </li>
+            <li>
+              <a href="{{url('/profile_settings')}}">
+              <i class="glyphicon glyphicon-user"></i>
+              Profile Settings </a>
+            </li>
+            <li>
+              <a href="{{url('/report')}}">
+              <i class="glyphicon glyphicon-warning-sign"></i>
+              Report </a>
+            </li>
+            <li>
+              <a href="{{url('auth/logout')}}">
+              <i class="glyphicon glyphicon-plane"></i>
+              Logout </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-
-
-
-  <div class="container-fluid " style="margin-top:50px;" id="maincontainer" >
-  <div class="row" style="height:800px;">
-    <div class="col-md-2" style="background:#dfded2;height:inherit;border-right:2px solid #dfded2;">
-      <div class="row">
-
-
-                <ul class="nav nav-sidebar sidebarul">
-                  <li ><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                  <li class="active"><a href="/notes"><span> <img  class="icons" src="images/notesicon.png"></span><span class="sidebartext">Notes</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/videosicon.jpg"></span><span class="sidebartext">Videos</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/communityicon.jpg"></span><span class="sidebartext">Community</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/circleicon.png"></span><span class="sidebartext">Circle</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/starredicon.jpg"></span><span class="sidebartext">Starred</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/samplepapericon.png"></span><span class="sidebartext">Sample paper</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/syllabusicon.jpg"></span><span class="sidebartext">Syllabus</span></a></li>
-
-            </ul>
-
-    </div>
   </div>
 
 
-    <div class="col-md-10"  >
-<div class="row" style="margin-top:30px;margin-left:30px;">
-              <div class="row" id="msgbox">
+</div>
 
-            </div>
-
-              <div class="row">
-                <label for="comment">Comment:</label>
-        <textarea class="form-control" rows="5" id="comment"></textarea>
-        <button type="button" id="sendie" class="btn btn-primary">Snd</button>
+<!-- side bar ends -->
+<div class = "container-fluid">
+  <div class="row" style="margin-top:30px;margin-left:30px;">
+    <div class="col-md-2 col-sm-2 col-lg-2"></div>
+    <div class="col-md-8 col-sm-8 col-lg-8">
+      <label for="comment">Comment:</label>
+      <textarea class="form-control" rows="4" id="comment"></textarea>
+    </div>
+    <div class="col-md-2 col-sm-2 col-lg-2">
+      <div class = "row" style="margin-top:30px;">  
+        <button type="button" id="sendie" class="btn btn-primary" style="background:orange; height :50px; width:100px">Send</button>
         <input type="hidden" id="forum_id" value="ETMA-101-1-1"/>
-            </div>
+      </div>
+    
+    </div>
 </div>
-          </div>
+</div>      
 
-</div>
 
-</div>
 
-<script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  Scripts-->
+  <!-- Menu Toggle Script -->
+    <script>
+      $("#side-button").click(function(){
+       $("#side-bar").animate({
+         width: "toggle"
+     });
+      });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+      $("#side-bar").hide();
+    });
+    </script>
+
+   <script>
 var instanse=false;
 var state=0;
 var allow=false;
@@ -159,17 +208,17 @@ chat.send(message);
 //gets the state of the chat
 function getStateAndLoadChat() {
 
-	if(!instanse){
+  if(!instanse){
 
-		instanse = true;
+    instanse = true;
     var forum_id=$('#forum_id').val();
 
-		$.ajax({
-			type: "POST",
-			url: "/forum",
-			data: {'function': 'getStateAndLoad', 'forum_id':forum_id},
-			dataType: "json",
-			success: function(data) {
+    $.ajax({
+      type: "POST",
+      url: "/forum",
+      data: {'function': 'getStateAndLoad', 'forum_id':forum_id},
+      dataType: "json",
+      success: function(data) {
 instanse = false;
 
 allow=true;
@@ -182,8 +231,8 @@ allow=true;
 call_update();
 
         }
-		});
-	}
+    });
+  }
   instanse = false;
 }
 function loaddata(messagearr)
@@ -201,15 +250,15 @@ function loaddata(messagearr)
 //Updates the chat
 function updateChat(forum_id) {
 
-	if(!instanse){
-		instanse = true;
+  if(!instanse){
+    instanse = true;
 
-		$.ajax({
-			type: "POST",
-			url: "/forum",
-			data: {'function': 'update','state': state,'forum_id':forum_id},
-			dataType: "json",
-			success: function(data) {
+    $.ajax({
+      type: "POST",
+      url: "/forum",
+      data: {'function': 'update','state': state,'forum_id':forum_id},
+      dataType: "json",
+      success: function(data) {
 
         if(data.text==false)
         {
@@ -224,37 +273,43 @@ function updateChat(forum_id) {
         loaddata(messagearr);
           state = data.state;
   instanse = false;
-			}
+      }
     }
-		});
-	}
-	else {
-		setTimeout(updateChat, 1500);
+    });
+  }
+  else {
+    setTimeout(updateChat, 1500);
 
-	}
+  }
 }
 
 //send the message
 function sendChat(message) {
   var forum_id=$('#forum_id').val();
 
-	$.ajax({
-		type: "POST",
-		url: "/forum",
-		data: {'function': 'send','forum_id': forum_id,'message':message},
-		dataType: "json",
-		success: function(data){
+  $.ajax({
+    type: "POST",
+    url: "/forum",
+    data: {'function': 'send','forum_id': forum_id,'message':message},
+    dataType: "json",
+    success: function(data){
 
       updateChat(forum_id);
-		}
-	});
+    }
+  });
 }
 
 
 
 
-</script>
+</script> 
 
 
-</body>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/login.js"></script>
+  </body>
 </html>
