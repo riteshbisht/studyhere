@@ -44,15 +44,7 @@
   </a>
 </div>
 
-
-
-
 </div>
-
-
-
-
-
 
     </div><!--row closed of the navbar-->
 

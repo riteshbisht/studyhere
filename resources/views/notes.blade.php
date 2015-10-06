@@ -109,6 +109,28 @@
 
     </div>
 
+<!---->
+    <div class="container-fluid " style="margin-top:50px;color:white" id="maincontainer" >
+
+      <div class="col-md-10"  >
+  <div class="row" style="margin-top:30px;margin-left:30px;">
+                <div class="row" id="msgbox">
+
+              </div>
+
+                <div class="row">
+                  <label for="comment">Comment:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+          <button type="button" id="sendie" class="btn btn-primary">Send</button>
+          <input type="hidden" id="forum_id" value="ETMA-101-1-1"/>
+              </div>
+  </div>
+            </div>
+
+  </div>
+
+  </div>
+    <!-- /.container -->
 
     <div class="container">
 
