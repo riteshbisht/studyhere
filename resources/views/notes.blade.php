@@ -8,56 +8,105 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+   
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="" name="description"/
+  <meta content="" name="author"/>
+  <title>Notes</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css//signin/sb-admin-2.css">
+  <link rel="stylesheet" href="css/signin/dash.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/signin/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/signin/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/signin/login.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
 
-    <!-- Custom CSS -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/signin/materialize.js"></script>
+  <script src="js/signin/materialize.min.js"></script>
+  <script src="js/signin/dash_js.js"></script>
+<!-- END GLOBAL MANDATORY STYLES -->  
+ <link rel="shortcut icon" href="favicon.ico"/>
 
 </head>
 
 <body style="background:url('images/1.jpg')">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<nav class="navbar-fixed  sidebar-menu-collapsed grey darken-4">
+<div class="nav-wrapper container-fluid"><a id="logo-container"  class="brand-logo center"> Notes</a>
+
+<div class="row">
+<div class="col-md-1 col-xs-2">
+ <a href='#menu-toggle' id='justify-icon'>
+    <span class='glyphicon glyphicon-align-justify btn' id="side-button"></span>
+  </a>
+</div>
+
+</div>
+
+   </div><!--row closed of the navbar-->
+
+  </div> <!--container-fluid closed-->
+</nav>
+
+
+<!-- side bar fixed-->
+
+<div class="container-fluid grey darken-4" id="side-bar">
+
+  <div class="row" style="height:700px;">
+      <ul>
+        <li class="profile-userpic">
+
+          <img src="" class="img-responsive" alt="hi">
+
+
+        </li>
+
+      </ul>
+
+          <div class="profile-usertitle-name" style="color:white;">
+        {{ Auth::user()->name }}
+          </div>
+      <div class="profile-usermenu">
+          <ul class="nav">
+            <li>
+              <a href="{{url('/dashboard')}}">
+              <i class="glyphicon glyphicon-home"></i>
+              Dashboard</a>
+            </li>
+            <li>
+              <a href="{{url('/profile_settings')}}">
+              <i class="glyphicon glyphicon-user"></i>
+              Profile Settings </a>
+            </li>
+            <li>
+              <a href="{{url('/report')}}">
+              <i class="glyphicon glyphicon-warning-sign"></i>
+              Report </a>
+            </li>
+            <li>
+              <a href="{{url('auth/logout')}}">
+              <i class="glyphicon glyphicon-plane"></i>
+              Logout </a>
+            </li>
+          </ul>
         </div>
-        <!-- /.container -->
-    </nav>
+  </div>
+
+
+</div>
+
+<!-- side bar ends -->
+
+    
 
     <!-- Page Content -->
     <div class="container">
@@ -118,7 +167,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Made By Tutelage</p>
                 </div>
             </div>
         </footer>
@@ -136,7 +185,21 @@
 <!--
 script fo ajax call loading the data
 -->
+<script>
+      $("#side-button").click(function(){
+       $("#side-bar").animate({
+         width: "toggle"
+     });
+      });
+    </script>
 
+    <script>
+    $(document).ready(function(){
+      $("#side-bar").hide();
+    });
+    </script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/login.js"></script>
 <script>
   $('document').ready(function() {
     $('.dropdown-toggle').dropdown();
