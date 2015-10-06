@@ -13,6 +13,11 @@ v1.1.0 (2015-xx-xx)
   is needed to prevent confusion with how `path` is used to select a database
   when using the `redis` scheme.
 
+- Changed how Predis handles URI strings in the context of UNIX domain sockets:
+  `unix:///path/to/socket` should be used now instead of `unix:/path/to/socket`
+  (note the lack of a double slash after the scheme). The old format should be
+  considered obsolete and will not be supported from the next major release.
+
 - Added support for default connection parameters in `Predis\Connection\Factory`
   augmenting the user-supplied parameters used to create new connections.
    but they do not override specific parameters when already defined.
@@ -23,6 +28,37 @@ v1.1.0 (2015-xx-xx)
 
 - Implemented support for SSL-encrypted connections, the connection parameters
   must use either the `tls` or `rediss` scheme.
+
+
+v1.0.3 (2015-07-30)
+================================================================================
+
+- __FIX__: the previous release introduced a severe regression on HHVM that made
+  the library unable to connect to Redis when using IPv4 addresses. Code running
+  on the standard PHP interpreter is not affected.
+
+
+v1.0.2 (2015-07-30)
+================================================================================
+
+- IPv6 is now fully supported.
+
+- Added `redis` as an accepted scheme for connection parameters. When using this
+  scheme, the rules used to parse URI strings match the provisional registration
+  [published by IANA](http://www.iana.org/assignments/uri-schemes/prov/redis).
+
+- Added new or missing commands: `HSTRLEN` (>= 3.2), `ZREVRANGEBYLEX` (>= 2.8)
+  and `MIGRATE` (>= 2.6).
+
+- Implemented support for the `ZADD` modifiers `NX|XX`, `CH`, `INCR` (Redis >=
+  3.0.2) using the simplified signature where scores and members are passed as
+  a named array.
+
+- __FIX__: `Predis\Configuration\Options` must not trigger the autoloader when
+  option values are strings (ISSUE #257).
+
+- __FIX__: `BITPOS` was not defined in the key-prefix processor (ISSUE #265) and
+  in the replication strategy.
 
 
 v1.0.1 (2015-01-02)

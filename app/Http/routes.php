@@ -131,6 +131,14 @@ Route::get('login/fb', 'FacebookController@login');
 //route to facebook callback
 Route::get('login/fb/callback', 'FacebookController@loginCallback');
 
+
+
+// Redirect to google to authenticate
+Route::get('google', 'GoogleController@google_redirect');
+// Get back to redirect url
+Route::get('account/google', 'GoogleController@google');
+
+
 //route to do verification
 Route::post('doverification',function(){
 return View('emailverify')->with ('message',$message);

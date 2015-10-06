@@ -147,6 +147,8 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 		'Laracasts\Flash\FlashServiceProvider',
+			'Laravel\Socialite\SocialiteServiceProvider',
+	//	'Artdarek\OAuth\OAuthServiceProvider',
 	],
 
 	/*
@@ -198,6 +200,8 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Form'			=> 'Illuminate\Html\FormFacade',
 		'HTML'			=> 'Illuminate\Html\HtmlFacade',
+		'Socialize' => 'Laravel\Socialite\Facades\Socialite',
+	//	'OAuth' => 'Artdarek\OAuth\Facade\OAuth',
 
 
 	],

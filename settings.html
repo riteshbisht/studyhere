@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="" name="description"/
+  <meta content="" name="author"/>
+  <title>Tutelage</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/sb-admin-2.css">
+  <link rel="stylesheet" href="css/dash.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/login.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/dash_js.js"></script>
+<!-- END GLOBAL MANDATORY STYLES -->
+
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+
+</head>
+<body>
+ <nav class="navbar-fixed  sidebar-menu-collapsed" style="background:blue">
+  <div class="container-fluid">
+    <div class="row">
+<div class="col-md-1 col-xs-2">
+     <a href='#menu-toggle' id='justify-icon'>
+        <span class='glyphicon glyphicon-align-justify btn' id="side-button"></span>
+      </a>
+</div>
+<div class="col-md-1 col-xs-2"></div>
+
+<div class="col-md-8 col-xs-6">
+
+<input type="search">
+<i class="glyphicon-glyphicon-search">
+</i>
+</div>
+
+
+
+
+
+
+
+    </div><!--row closed of the navbar-->
+
+  </div> <!--container-fluid closed-->
+</nav>
+
+
+<!-- side bar fixed-->
+
+<div class="container-fluid" id="side-bar">
+
+  <div class="row" style="background:grey;height:700px;">
+      <ul>
+        <li class="profile-userpic">
+
+          <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="hi">
+
+
+        </li>
+
+      </ul>
+
+          <div class="profile-usertitle-name">
+            USERNAME
+          </div>
+      <div class="profile-usermenu">
+          <ul class="nav">
+            <li>
+              <a href="index.html">
+              <i class="glyphicon glyphicon-home"></i>
+              Dashboard</a>
+            </li>
+            <li>
+              <a href="settings.html">
+              <i class="glyphicon glyphicon-user"></i>
+              Profile Settings </a>
+            </li>
+            <li>
+              <a href="report.html">
+              <i class="glyphicon glyphicon-warning-sign"></i>
+              Report </a>
+            </li>
+          </ul>
+        </div>
+  </div>
+
+
+</div>
+
+<!-- side bar ends -->
+
+
+ <!--  Scripts-->
+  <!-- Menu Toggle Script -->
+    <script>
+      $("#side-button").click(function(){
+       $("#side-bar").animate({
+         width: "toggle"
+     });
+      });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+      $("#side-bar").hide();
+    });
+    </script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/login.js"></script>
+  </body>
+</html>

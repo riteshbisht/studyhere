@@ -33,7 +33,7 @@ More details about this project can be found on the [frequently asked questions]
 - Abstraction for Lua scripting (Redis >= 2.6) with automatic switching between `EVALSHA` or `EVAL`.
 - Abstraction for `SCAN`, `SSCAN`, `ZSCAN` and `HSCAN` (Redis >= 2.8) based on PHP iterators.
 - Connections are established lazily by the client upon the first command and can be persisted.
-- Connections can be established via TCP/IP (optionally TLS/SSL-encrypted) or UNIX domain sockets.
+- Connections can be established via TCP/IP (also TLS/SSL-encrypted) or UNIX domain sockets.
 - Support for [Webdis](http://webd.is) (requires both `ext-curl` and `ext-phpiredis`).
 - Support for custom connection classes for providing different network or protocol backends.
 - Flexible system for defining custom commands and server profiles.
@@ -95,6 +95,14 @@ $client = new Predis\Client([
 $client = new Predis\Client('tcp://10.0.0.1:6379');
 ```
 
+It is also possible to use UNIX domain sockets when connecting to local Redis instances, parameters
+must use the `unix` scheme and specify a path for the socket file:
+
+```php
+$client = new Predis\Client(['scheme' => 'unix', 'path' => '/path/to/redis.sock']);
+$client = new Predis\Client('unix:/path/to/redis.sock');
+```
+
 The client can leverage TLS/SSL encryption to connect to secured remote Redis instances without the
 the need to configure an SSL proxy like stunnel. This can be useful when connecting to nodes run by
 various cloud hosting providers. Encryption can be enabled with the use the `tls` scheme along with
@@ -104,7 +112,7 @@ an array of suitable [options](http://php.net/manual/context.ssl.php) passed in 
 // Named array of connection parameters:
 $client = new Predis\Client([
   'scheme' => 'tls',
-  'ssl'    => ['cafile' => 'provate.pem', 'verify_peer' => true],
+  'ssl'    => ['cafile' => 'private.pem', 'verify_peer' => true],
 ]
 
 // Same set of parameters, but using an URI string:

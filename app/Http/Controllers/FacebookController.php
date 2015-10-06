@@ -82,7 +82,7 @@ $response = $fb->get('/me?fields=id,name,email', $access_token);
 
 						$user->name = $me['name'];
 						$user->email = $me['email'];
-						$user->uid=$uid;
+						//$user->uid=$uid;
 						$user->save();
 
 

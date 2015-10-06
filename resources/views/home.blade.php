@@ -57,7 +57,7 @@
       <h1 class="header center black-text" style="font-family:Lucida Console;">TUTELAGE</h1>
 
       <div class="row center">
-        <h5 class="header col s12 light">describe concept in one line</h5>
+        <h5 class="header col s12 light">A one stop shop for all your academic needs</h5>
       </div>
       <div class="row center">
 
@@ -94,7 +94,7 @@
             <h2 class="center black-text"><i class="material-icons">view_module</i></h2>
             <h5 class="center">View notes online</h5>
 
-            
+
           </div>
         </div>
 
@@ -103,7 +103,7 @@
             <h2 class="center black-text"><i class="material-icons">group</i></h2>
             <h5 class="center">Connect with various students</h5>
 
-            
+
           </div>
         </div>
 
@@ -112,7 +112,7 @@
             <h2 class="center black-text"><i class="material-icons">settings</i></h2>
             <h5 class="center">Easy to work with</h5>
 
-            
+
           </div>
         </div>
 
@@ -121,7 +121,7 @@
             <h2 class="center black-text"><i class="material-icons">videocam</i></h2>
             <h5 class="center">Video Lectures</h5>
 
-            
+
           </div>
         </div>
 
