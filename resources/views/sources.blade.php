@@ -94,10 +94,34 @@
   @endforeach
 
 </div>
+
+<!--forum-->
+    <div class="container " style="margin-top:50px; color:white;" id="maincontainer" >
+
+      <div class="col-md-10"  >
+  <div class="row" style="margin-top:30px;margin-left:30px;">
+                <div class="row" id="msgbox">
+
+              </div>
+
+                <div class="row">
+                  <label for="comment">Comment:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+          <button type="button" id="sendie" class="btn btn-primary">Send</button>
+          <input type="hidden" id="forum_id" value='{{$subtopic_code}}'/>
+              </div>
+  </div>
+            </div>
+
+  </div>
+
+  </div>
+    <!-- /.container -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="{{url('js/forum.js')}}"></script>
 
 <script>
 var current;

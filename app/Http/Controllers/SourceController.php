@@ -15,7 +15,7 @@ class SourceController extends Controller {
 $subtopic_code=$arr["subtopic_code"];
 	$content=Content::where('subtopic_code',$subtopic_code)->get();
 
-	return view('sources')->with(['allcontent'=>$content,'subtopic_name'=>$subtopic_name]);
+	return view('sources')->with(['allcontent'=>$content,'subtopic_name'=>$subtopic_name,'subtopic_code'=>$subtopic_code]);
 
 		}
 

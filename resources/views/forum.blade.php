@@ -14,9 +14,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="/css/icons.css">
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <style>
 .messagestyle
 {
@@ -29,64 +26,40 @@
 </style>
 </head>
 
-<body >
-  <div class="bg-info" style="position:fixed;width:200px;z-index:9999;height:200px;bottom:30px;right:30px;">
-      <input type="textbox" />
-  </div>
-  <div style="position:fixed;width:20px;height:20px;bottom:2px;right:2px;background:black;">
+<body  style="background-image:url('images/1.jpg');color:white;">
 
-  </div>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">tutelage</a>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Start Bootstrap</a>
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Settings</a></li>
-
-              <li >
-                <a href="\home" id="#username">{{ Auth::user()->name }}</a></li>
-              </li>
-                  <li class=" navbarli"><a href="{{ url('/auth/logout') }}">Logout</a></li>
-            </ul>
-            <form class="navbar-form navbar-right">
-              <input type="text" class="form-control" placeholder="Search...">
-            </form>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="#">About</a>
+                  </li>
+                  <li>
+                      <a href="#">Services</a>
+                  </li>
+                  <li>
+                      <a href="#">Contact</a>
+                  </li>
+              </ul>
           </div>
-        </div>
-      </nav>
-
-
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
 
   <div class="container-fluid " style="margin-top:50px;" id="maincontainer" >
-  <div class="row" style="height:800px;">
-    <div class="col-md-2" style="background:#dfded2;height:inherit;border-right:2px solid #dfded2;">
-      <div class="row">
-
-
-                <ul class="nav nav-sidebar sidebarul">
-                  <li ><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                  <li class="active"><a href="/notes"><span> <img  class="icons" src="images/notesicon.png"></span><span class="sidebartext">Notes</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/videosicon.jpg"></span><span class="sidebartext">Videos</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/communityicon.jpg"></span><span class="sidebartext">Community</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/circleicon.png"></span><span class="sidebartext">Circle</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/starredicon.jpg"></span><span class="sidebartext">Starred</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/samplepapericon.png"></span><span class="sidebartext">Sample paper</span></a></li>
-                  <li><a href="#"><span> <img  class="icons" src="images/syllabusicon.jpg"></span><span class="sidebartext">Syllabus</span></a></li>
-
-            </ul>
-
-    </div>
-  </div>
-
 
     <div class="col-md-10"  >
 <div class="row" style="margin-top:30px;margin-left:30px;">
@@ -97,7 +70,7 @@
               <div class="row">
                 <label for="comment">Comment:</label>
         <textarea class="form-control" rows="5" id="comment"></textarea>
-        <button type="button" id="sendie" class="btn btn-primary">Snd</button>
+        <button type="button" id="sendie" class="btn btn-primary">Send</button>
         <input type="hidden" id="forum_id" value="ETMA-101-1-1"/>
             </div>
 </div>
@@ -107,154 +80,16 @@
 
 </div>
 
-<script>
-var instanse=false;
-var state=0;
-var allow=false;
-function call_update()
-{
-
-  $forum_id=$('#forum_id').val();
-  updateChat($forum_id);
-instanse=false;
-    setTimeout(call_update,5000);
-
-}
-$('document').ready(function(){
-
-
-
-  function Chat () {
-      this.update = updateChat;
-      this.send = sendChat;
-      this.getStateAndLoad = getStateAndLoadChat;
-  }
-
-  var chat =  new Chat();
-
-chat.getStateAndLoad();
-$('#sendie').click(function(e) {
-
-           var message=$('#comment').val();
-           $('#comment').val('');
-           $(this).attr("disabled", true);
-if(message=='')
-{
-
-}
-else {
-// send
-
-chat.send(message);
-}
-});
-
-});
-
-
-
-//load the inital chat
-
-
-//gets the state of the chat
-function getStateAndLoadChat() {
-
-	if(!instanse){
-
-		instanse = true;
-    var forum_id=$('#forum_id').val();
-
-		$.ajax({
-			type: "POST",
-			url: "/forum",
-			data: {'function': 'getStateAndLoad', 'forum_id':forum_id},
-			dataType: "json",
-			success: function(data) {
-instanse = false;
-
-allow=true;
-
-        var messagearr=data.messages;
-        //load the chat
-      loaddata(messagearr);
-        state = data.state;
-
-call_update();
-
-        }
-		});
-	}
-  instanse = false;
-}
-function loaddata(messagearr)
-{
-
-  if(allow)
-  {
-  for(i=0;i<messagearr.length;i++)
-  {
-    $("#msgbox").append('<div class="row messagestyle" >'+messagearr[i].message+'</div><div class="row datetimestyle">'+messagearr[i].created_at+'</div><hr>')
- $("#sendie").attr("disabled", false);
-  }
-}
-}
-//Updates the chat
-function updateChat(forum_id) {
-
-	if(!instanse){
-		instanse = true;
-
-		$.ajax({
-			type: "POST",
-			url: "/forum",
-			data: {'function': 'update','state': state,'forum_id':forum_id},
-			dataType: "json",
-			success: function(data) {
-
-        if(data.text==false)
-        {
-
-        }
-        else if(data.msg.length==0)
-        {
-
-        }
-        else {
-        var messagearr=data.msg;
-        loaddata(messagearr);
-          state = data.state;
-  instanse = false;
-			}
-    }
-		});
-	}
-	else {
-		setTimeout(updateChat, 1500);
-
-	}
-}
-
-//send the message
-function sendChat(message) {
-  var forum_id=$('#forum_id').val();
-
-	$.ajax({
-		type: "POST",
-		url: "/forum",
-		data: {'function': 'send','forum_id': forum_id,'message':message},
-		dataType: "json",
-		success: function(data){
-
-      updateChat(forum_id);
-		}
-	});
-}
 
 
 
 
-</script>
 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/forum.js"></script>
 
 </body>
 </html>

@@ -72,7 +72,7 @@
       <div class="form-group">
         <label>Select University</label>
         <select class="form-control" id="university_dropdown">
-
+            <option class="university_list dropdownli">select University</option>
         </select>
         <br>
         <label>Select Courses</label>
@@ -108,7 +108,7 @@
         </div>
 
     </div>
-    <!-- /.container -->
+
 
     <div class="container">
 
@@ -200,7 +200,7 @@ if (subject_code == 'SUBJECT') {
       console.log(objarr);
       handle_topic(objarr);
     }
-  });
+  });duhe
 }
 
 }
@@ -321,6 +321,7 @@ return str;
     }
   }
 </script>
+<script src="js/forum.js"></script>
 
 </body>
 
