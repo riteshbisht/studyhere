@@ -29,7 +29,7 @@ public function login()
 	$helper = $fb->getRedirectLoginHelper();
 
 $permissions = ['email', 'public_profile']; // optional
-$loginUrl = $helper->getLoginUrl('http://studyhere-audiodict.rhcloud.com/login/fb/callback', $permissions);
+$loginUrl = $helper->getLoginUrl('http://ritesh.app:8000/login/fb/callback', $permissions);
 
 
 
@@ -79,11 +79,14 @@ $response = $fb->get('/me?fields=id,name,email', $access_token);
 //if user does not exist create user
 				if (empty($profile)) {
 						$user = new App\User;
-
-						$user->name = $me['name'];
-						$user->email = $me['email'];
-						//$user->uid=$uid;
-						$user->save();
+						$existinguser=App\User::whereemail($me['email'])->first();
+						if(empty($existinguser))
+						{
+							$user->name = $me['name'];
+							$user->email = $me['email'];
+							//$user->uid=$uid;
+							$user->save();
+					}
 
 
 						$profile = new App\Profile();
@@ -91,7 +94,7 @@ $response = $fb->get('/me?fields=id,name,email', $access_token);
 						$profile->photo='https://graph.facebook.com/'.$me['id'].'/picture?type=large';
 						$user->email = $me['email'];
 						$profile->uid = $uid;
-						$profile->username = $user['name'];
+						$profile->username = $me['name'];
 						$profile = $user->profiles()->save($profile);
 				}
 

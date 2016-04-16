@@ -60,7 +60,8 @@
   </nav>
 
   <div class="container-fluid " style="margin-top:50px;" id="maincontainer" >
-
+<div class = "row">
+  <div class = "col-md-2"></div>
     <div class="col-md-10"  >
 <div class="row" style="margin-top:30px;margin-left:30px;">
               <div class="row" id="msgbox">
